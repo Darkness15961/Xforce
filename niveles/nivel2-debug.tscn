@@ -1,10 +1,13 @@
 [gd_scene format=4 uid="uid://b2k7mvf72anqm"]
 
 [ext_resource type="Script" uid="uid://fyrtska5uq4y" path="res://niveles/nivel_2_debug.gd" id="1_bqvyv"]
-[ext_resource type="Texture2D" uid="uid://cgayuistsmgnx" path="res://assets gamejam/Fondos.png" id="1_vpafd"]
 [ext_resource type="Texture2D" uid="uid://8aq30mv84d8h" path="res://assets gamejam/Tiles_Lazos.png" id="2_cg8o8"]
 [ext_resource type="PackedScene" uid="uid://pt6hnjwjt34x" path="res://escenas generales/Jugador.tscn" id="3_bqvyv"]
 [ext_resource type="Texture2D" uid="uid://ddqbps0seoe07" path="res://icon.svg" id="4_cg8o8"]
+[ext_resource type="Texture2D" uid="uid://chci0b4oy0tda" path="res://assets gamejam/Fondo_Cielo.png" id="4_vu5n3"]
+[ext_resource type="Texture2D" uid="uid://be25wmoo8g27o" path="res://assets gamejam/Fondo_Casas.png" id="5_r1qk8"]
+[ext_resource type="Texture2D" uid="uid://dep6iiwqdqnl5" path="res://assets gamejam/Fondo_Montaña.png" id="5_vu5n3"]
+[ext_resource type="Texture2D" uid="uid://fbs41w0t1iar" path="res://assets gamejam/Fondo_Cerca.png" id="6_l3wov"]
 [ext_resource type="AudioStream" uid="uid://d7qjuboskv8s" path="res://assets gamejam/SAMIY-GAMEJAM-OST-1.mp3" id="6_tvve1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_170po"]
@@ -93,16 +96,6 @@ size = Vector2(26, 24)
 script = ExtResource("1_bqvyv")
 reproductorAudio = NodePath("AudioStreamPlayer")
 
-[node name="Fondos" type="Sprite2D" parent="." unique_id=1284197522]
-position = Vector2(320, 187.00002)
-scale = Vector2(2, 2.1000001)
-texture = ExtResource("1_vpafd")
-
-[node name="Fondos" type="Sprite2D" parent="Fondos" unique_id=212378385]
-position = Vector2(343.99997, 0.4761866)
-scale = Vector2(1.1500001, 0.99470896)
-texture = ExtResource("1_vpafd")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=54980461]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAACABQAAAAAAAAAAAACABUAAAAAAAEAAAACABYAAAAAAAIAAAADABQAAAABAAAAAAADABUAAAABAAEAAAADABYAAAABAAIAAAAEABQAAAACAAAAAAAEABUAAAACAAEAAAAEABYAAAACAAIAAAAFABQAAAACAAAAAAAFABUAAAACAAEAAAAFABYAAAACAAIAAAAGABQAAAACAAAAAAAGABUAAAACAAEAAAAGABYAAAACAAIAAAAHABQAAAACAAAAAAAHABUAAAACAAEAAAAHABYAAAACAAIAAAAIABQAAAACAAAAAAAIABUAAAACAAEAAAAIABYAAAACAAIAAAAJABQAAAACAAAAAAAJABUAAAACAAEAAAAJABYAAAACAAIAAAAKABQAAAACAAAAAAAKABUAAAACAAEAAAAKABYAAAACAAIAAAALABQAAAACAAAAAAALABUAAAACAAEAAAALABYAAAACAAIAAAAMABQAAAACAAAAAAAMABUAAAACAAEAAAAMABYAAAACAAIAAAANABQAAAACAAAAAAANABUAAAACAAEAAAANABYAAAACAAIAAAAOABQAAAADAAAAAAAOABUAAAADAAEAAAAOABYAAAADAAIAAAAQABMAAAAEAAAAAAAQABQAAAAEAAEAAAAQABUAAAAEAAIAAAAQABYAAAAEAAMAAAARABMAAAAFAAAAAAARABQAAAAFAAEAAAARABUAAAAFAAIAAAARABYAAAAFAAMAAAASABMAAAAGAAAAAAASABQAAAAGAAEAAAATABMAAAAHAAAAAAATABQAAAAHAAEAAAATABUAAAAHAAIAAAATABYAAAAHAAMAAAAUABMAAAAIAAAAAAAUABQAAAAIAAEAAAAUABUAAAAIAAIAAAAUABYAAAAIAAMAAAAVABEAAAAEAAAAAAAVABIAAAAEAAEAAAAVABMAAAAEAAIAAAAVABQAAAAEAAMAAAAWABEAAAAFAAAAAAAWABIAAAAFAAEAAAAWABMAAAAFAAIAAAAWABQAAAAFAAMAAAAXABEAAAAGAAAAAAAXABIAAAAGAAEAAAAYABEAAAAHAAAAAAAYABIAAAAHAAEAAAAYABMAAAAHAAIAAAAYABQAAAAHAAMAAAAZABEAAAAIAAAAAAAZABIAAAAIAAEAAAAZABMAAAAIAAIAAAAZABQAAAAIAAMAAAAVABUAAAAEAAIAAAAVABYAAAAEAAMAAAAWABUAAAAFAAIAAAAWABYAAAAFAAMAAAAYABUAAAAHAAIAAAAYABYAAAAHAAMAAAAZABUAAAAIAAIAAAAZABYAAAAIAAMAAAAcABIAAAAFAAQAAAAdABIAAAAGAAQAAAAeABIAAAAGAAQAAAAgABIAAAAGAAQAAAAhABIAAAAGAAQAAAAiABIAAAAHAAQAAAAkABAAAAAGAAQAAAAlABAAAAAGAAQAAAAmABAAAAAHAAQAAAAfABIAAAAGAAQAAAAjABAAAAAGAAQAAAAiABAAAAAFAAQAAAA=")
@@ -119,14 +112,45 @@ limit_bottom = 360
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=15133210]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1066082593]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1258, 0)
 
-[node name="Fondos" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1971964310]
-position = Vector2(-512, 152)
-texture = ExtResource("1_vpafd")
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1770128121]
+scale = Vector2(2, 2)
+texture = ExtResource("4_vu5n3")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=527442811]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1258, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=648860728]
+scale = Vector2(2, 2)
+texture = ExtResource("5_vu5n3")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=770589233]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1258, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=782365218]
+scale = Vector2(2, 2)
+texture = ExtResource("5_r1qk8")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1962277001]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1258, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=445582231]
+scale = Vector2(2, 2)
+texture = ExtResource("6_l3wov")
+centered = false
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1519365672]
 position = Vector2(139, 306)
-mass = 5.0
+mass = 6.0
+gravity_scale = 0.01
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=933939576]
 shape = SubResource("RectangleShape2D_g4v7s")
