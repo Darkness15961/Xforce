@@ -4,8 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cgayuistsmgnx" path="res://assets gamejam/Fondos.png" id="1_svuvw"]
 [ext_resource type="Texture2D" uid="uid://8aq30mv84d8h" path="res://assets gamejam/Tiles_Lazos.png" id="2_juveg"]
 [ext_resource type="AudioStream" uid="uid://d7qjuboskv8s" path="res://assets gamejam/SAMIY-GAMEJAM-OST-1.mp3" id="3_v6yed"]
-[ext_resource type="PackedScene" uid="uid://pt6hnjwjt34x" path="res://escenas generales/Jugador.tscn" id="4_s4hbh"]
-[ext_resource type="PackedScene" uid="uid://dhhjqfi452ab3" path="res://escenas generales/Jugador2.tscn" id="5_6fswf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bc54p"]
 texture = ExtResource("2_juveg")
@@ -88,34 +86,10 @@ sources/0 = SubResource("TileSetAtlasSource_bc54p")
 
 [sub_resource type="Animation" id="Animation_svuvw"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Jugador:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(724, 285)]
-}
 
 [sub_resource type="Animation" id="Animation_juveg"]
 resource_name = "animacion1"
 length = 40.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Jugador:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 19.95995, 20.032007, 40),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(724, 287), Vector2(417, 286), Vector2(418, 287), Vector2(731, 288)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v6yed"]
 _data = {
@@ -153,10 +127,3 @@ parameters/looping = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1734476556]
 libraries/ = SubResource("AnimationLibrary_v6yed")
-
-[node name="Jugador" parent="." unique_id=1562687641 instance=ExtResource("4_s4hbh")]
-position = Vector2(724, 285)
-up_direction = Vector2(0, 1)
-
-[node name="Jugador2" parent="." unique_id=65163827 instance=ExtResource("5_6fswf")]
-position = Vector2(757, 285)
