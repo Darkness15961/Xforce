@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b0v4o453tgg40"]
 
-[ext_resource type="Script" uid="uid://dumbw8t4lnn5j" path="res://UIgeneral/scripts/opcionesdepausa.gd" id="1_c1117"]
+[ext_resource type="Script" uid="uid://dumbw8t4lnn5j" path="res://UI/scripts/opcionesdepausa.gd" id="1_c1117"]
+[ext_resource type="Theme" uid="uid://df7w8y1a9bnc4" path="res://default_theme.tres" id="2_theme"]
 
 [node name="Opcionesdepausa" type="CanvasLayer" unique_id=2079133126]
 process_mode = 3
@@ -8,6 +9,8 @@ layer = 128
 script = ExtResource("1_c1117")
 
 [node name="Panel" type="Panel" parent="." unique_id=1453532986]
+texture_filter = 2
+theme = ExtResource("2_theme")
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

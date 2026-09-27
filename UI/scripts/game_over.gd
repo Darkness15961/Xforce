@@ -2,29 +2,35 @@ extends CanvasLayer
 
 @export_file("*.tscn") var ReinicioEscena: String
 @export var ocultar: Control
+
 func _ready() -> void:
 	Global.gameoveractivo = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	
-	if $".".visible and Global.gameoveractivo == true:
+	if visible and Global.gameoveractivo:
 		$VBoxContainer/HBoxContainer/btnReiniciar.grab_focus()
-		ocultar.visible = false
+		if ocultar:
+			ocultar.visible = false
 		Global.gameoveractivo = false
-	if Global.EstadodoVivo == false:
+
+	if not Global.EstadodoVivo and not visible:
 		get_tree().paused = true
-		$".".visible = true
+		visible = true
+		Global.gameoveractivo = true
 
 func _on_btn_reiniciar_pressed() -> void:
-	$".".visible = false
+	visible = false
 	get_tree().paused = false
 	Global.EstadodoVivo = true
 	Global.vidaJugador = 10
-	get_tree().change_scene_to_file(ReinicioEscena)
+	if ReinicioEscena != "":
+		get_tree().change_scene_to_file(ReinicioEscena)
+	else:
+		get_tree().reload_current_scene()
 
 func _on_btn_salir_menu_pressed() -> void:
 	get_tree().paused = false
 	Global.EstadodoVivo = true
 	Global.vidaJugador = 10
-	get_tree().change_scene_to_file("res://MenuPrincipal/escenas/MenuPrincipal.tscn")
+	get_tree().change_scene_to_file("res://menu/menu.tscn")
+

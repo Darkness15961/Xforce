@@ -130,7 +130,8 @@ animations = [{
 
 [node name="Jugador" type="CharacterBody2D" unique_id=1562687641]
 script = ExtResource("1_p0w4i")
-SPEED = 300.0
+
+
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1109182892]
 position = Vector2(1, 4)

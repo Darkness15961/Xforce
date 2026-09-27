@@ -15,6 +15,8 @@ func _ready() -> void:
 			# Si es la primera vez que entras al juego, reproduce desde el inicio
 			reproductorAudio.play()
 
+var jugadorActual: Node2D = null
+
 func _process(_delta: float) -> void:
 	if jugadorEnArea and Input.is_action_just_pressed("Interact"):
 		cambiarEscena()
@@ -22,14 +24,18 @@ func _process(_delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Jugador"):
 		jugadorEnArea = true
-		Global.posicionJugador = body.global_position
-		Global.deberRestaurarPosicion = true
+		jugadorActual = body
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Jugador"):
 		jugadorEnArea = false
+		jugadorActual = null
 
 func cambiarEscena() -> void:
+	if jugadorActual:
+		Global.posicionJugador = jugadorActual.global_position
+		Global.deberRestaurarPosicion = true
+
 	# Guardamos el segundo exacto en el que está la canción/audio antes de salir
 	if reproductorAudio:
 		Global.posicionAudio = reproductorAudio.get_playback_position()
