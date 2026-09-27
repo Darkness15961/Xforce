@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dye1v0o3c18ic"]
+
+[ext_resource type="Texture2D" uid="uid://cykehcyyncoac" path="res://assets gamejam/ventilador_32x32_preview_x8.png" id="1_6cpin"]
+[ext_resource type="Script" uid="uid://ccrtmqjm0wv4v" path="res://escenas generales/ventilador.gd" id="1_kjlrq"]
+[ext_resource type="Texture2D" uid="uid://ccctrt5fakn3b" path="res://assets gamejam/particula_viento.png" id="2_kjlrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(28, 29)
+
+[sub_resource type="Gradient" id="Gradient_g4v7s"]
+offsets = PackedFloat32Array(0, 0.0061728396, 0.018518519, 0.7222222, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.13580246, 0.13580246, 0.13580246, 1, 0.5137255, 1, 0.9607843, 1, 1, 1, 1, 1, 0.54911435, 0.54911435, 0.54911435, 1)
+
+[node name="Ventilador" type="Area2D" unique_id=520920194]
+script = ExtResource("1_kjlrq")
+fuerza_empuje = -400.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=910424624]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=937071557]
+scale = Vector2(0.140625, 0.12109375)
+texture = ExtResource("1_6cpin")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=2001721136]
+amount = 18
+texture = ExtResource("2_kjlrq")
+lifetime = 1.2
+randomness = 0.3
+fixed_fps = 30
+draw_order = 1
+gravity = Vector2(0, -45)
+orbit_velocity_min = 30.0
+orbit_velocity_max = 30.0
+damping_min = 0.5
+damping_max = 15.0
+scale_amount_min = 0.5
+scale_amount_max = 1.1
+color = Color(0.54901963, 1, 1, 1)
+color_ramp = SubResource("Gradient_g4v7s")
