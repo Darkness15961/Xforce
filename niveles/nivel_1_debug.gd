@@ -2,11 +2,18 @@ extends Node2D
 
 var jugadorEnArea: bool = false
 
-# Asegúrate de poner la ruta correcta hacia tu nodo AudioStreamPlayer en esta escena
+# Asegúrate de asignar el nodo AudioStreamPlayer en el Inspector de esta escena
 @export var reproductorAudio: AudioStreamPlayer
 
 func _ready() -> void:
-	pass
+	if reproductorAudio:
+		if Global.deberRestaurarAudio:
+			# Reproduce desde el segundo guardado
+			reproductorAudio.play(Global.posicionAudio)
+			Global.deberRestaurarAudio = false
+		else:
+			# Si es la primera vez que entras al juego, reproduce desde el inicio
+			reproductorAudio.play()
 
 func _process(_delta: float) -> void:
 	if jugadorEnArea and Input.is_action_just_pressed("Interact"):
@@ -23,8 +30,9 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		jugadorEnArea = false
 
 func cambiarEscena() -> void:
-	# Guardamos el segundo exacto en el que está la canción/audio
-	Global.posicionAudio = reproductorAudio.get_playback_position()
+	# Guardamos el segundo exacto en el que está la canción/audio antes de salir
+	if reproductorAudio:
+		Global.posicionAudio = reproductorAudio.get_playback_position()
 	Global.deberRestaurarAudio = true
 	
 	call_deferred("_realizarCambioEscena")

@@ -1,16 +1,40 @@
-extends Node2D # Este es el nodo raíz de tu nueva escena
+extends Node2D
 
-# Pon la ruta hacia el AudioStreamPlayer de la NUEVA escena
+var jugadorEnArea: bool = false
+
+# Asegúrate de asignar el nodo AudioStreamPlayer en el Inspector de esta escena
 @export var reproductorAudio: AudioStreamPlayer
 
 func _ready() -> void:
-	# Verificamos si hay un tiempo de audio guardado
-	if Global.deberRestaurarAudio:
-		# Reproducimos el audio desde el segundo exacto que guardamos
-		reproductorAudio.play(Global.posicionAudio)
-		
-		# Apagamos el interruptor
-		Global.deberRestaurarAudio = false
-	else:
-		# Si no hay nada guardado (ej. entraste a la escena directamente), se reproduce normal
-		reproductorAudio.play()
+	if reproductorAudio:
+		if Global.deberRestaurarAudio:
+			# Continúa la música exactamente donde la dejaste en la escena anterior
+			reproductorAudio.play(Global.posicionAudio)
+			Global.deberRestaurarAudio = false
+		else:
+			reproductorAudio.play()
+
+func _process(_delta: float) -> void:
+	if jugadorEnArea and Input.is_action_just_pressed("Interact"):
+		cambiarEscena()
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Jugador"):
+		jugadorEnArea = true
+		Global.posicionJugador = body.global_position
+		Global.deberRestaurarPosicion = true
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Jugador"):
+		jugadorEnArea = false
+
+func cambiarEscena() -> void:
+	# Guardamos el segundo exacto en el que está la canción/audio antes de salir
+	if reproductorAudio:
+		Global.posicionAudio = reproductorAudio.get_playback_position()
+	Global.deberRestaurarAudio = true
+	
+	call_deferred("_realizarCambioEscena")
+
+func _realizarCambioEscena() -> void:
+	get_tree().change_scene_to_file("res://niveles/nivel1-debug.tscn")
