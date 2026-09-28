@@ -563,7 +563,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
-text = "Créditos"
+text = "Creditos"
 flat = true
 
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=1327432496]

@@ -227,7 +227,7 @@ centered = false
 [node name="ChakanaParte2" parent="." unique_id=983383753 instance=ExtResource("18_chacana")]
 position = Vector2(672, 200)
 rotation = -1.5707964
-siguiente_escena = "res://escenas/Final/Final.tscn"
+siguienteEscena = "res://escenas/Final/Final.tscn"
 textura = ExtResource("16_aajs7")
 
 [node name="HUD_Nivel2" parent="." instance=ExtResource("17_hud2")]

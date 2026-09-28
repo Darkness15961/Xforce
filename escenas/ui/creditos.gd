@@ -1,11 +1,11 @@
 extends Control
 
-@onready var btn_volver: Button = $PanelFondo/MarginContainer/VBoxContainer/BtnVolver
+@onready var btnVolver: Button = $PanelFondo/MarginContainer/VBoxContainer/BtnVolver
 
 func _ready() -> void:
 	Global.reproducir_musica_menu()
-	if btn_volver:
-		btn_volver.grab_focus()
+	if btnVolver:
+		btnVolver.grab_focus()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") or event.is_action_pressed("Pausa"):

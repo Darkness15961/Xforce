@@ -95,7 +95,7 @@ text = "VOLVER A LA PARTIDA
 [node name="BtnSalirMenu" type="Button" parent="Panel/VBoxContainer2" unique_id=942846738]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-text = "REGRESAR AL MENÚ PRINCIPAL"
+text = "REGRESAR AL MENU PRINCIPAL"
 
 [connection signal="value_changed" from="Panel/VBoxContainer2/HBoxContainer3/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
 [connection signal="value_changed" from="Panel/VBoxContainer2/HBoxContainer2/SFXSlider" to="." method="_on_sfx_slider_value_changed"]

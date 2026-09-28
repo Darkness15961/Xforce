@@ -243,18 +243,18 @@ position_smoothing_speed = 1.0
 
 [node name="Ventilador" parent="." unique_id=520920194 instance=ExtResource("16_smq0n")]
 position = Vector2(2080, 330)
-fuerza_empuje = -500.0
+fuerzaEmpuje = -500.0
 
 [node name="Ventilador2" parent="." unique_id=870082221 instance=ExtResource("16_smq0n")]
 position = Vector2(1792, 300)
-fuerza_empuje = -700.0
+fuerzaEmpuje = -700.0
 
 [node name="Ventilador3" parent="." unique_id=147231813 instance=ExtResource("16_smq0n")]
 position = Vector2(1533, 264)
 
 [node name="Ventilador4" parent="." unique_id=2060456770 instance=ExtResource("16_smq0n")]
 position = Vector2(1392, 313)
-fuerza_empuje = -600.0
+fuerzaEmpuje = -600.0
 
 [node name="Transicion2" parent="." unique_id=2056414805 instance=ExtResource("10_44ky0")]
 position = Vector2(1216, 152)

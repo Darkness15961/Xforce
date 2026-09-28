@@ -17,7 +17,7 @@ func _ready() -> void:
 		sprite.material = sprite.material.duplicate()
 	_actualizar_borde(false)
 	
-	# Verificar si el jugador ya se encuentra en el área al iniciar la escena
+	# Verificar si el jugador ya se encuentra en el area al iniciar la escena
 	for body in get_overlapping_bodies():
 		if _es_jugador(body):
 			jugadorEnArea = true
@@ -27,7 +27,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	sprite.play("si")
-	if jugadorEnArea and Input.is_action_just_pressed("Interact") and not Global.en_transicion:
+	if jugadorEnArea and Input.is_action_just_pressed("Interact") and not Global.enTransicion:
 		cambiarEscena()
 
 func _es_jugador(body: Node2D) -> bool:
@@ -51,19 +51,19 @@ func _actualizar_borde(activado: bool) -> void:
 
 func cambiarEscena() -> void:
 	if siguienteEscena == "":
-		push_warning("Transicion: 'siguienteEscena' no está configurada en el Inspector.")
+		push_warning("Transicion: 'siguienteEscena' no esta configurada en el Inspector.")
 		return
 
 	if jugadorActual:
 		Global.posicionJugador = jugadorActual.global_position
 		Global.deberRestaurarPosicion = true
 
-	# Guardar la posición exacta del audio en este instante preciso
-	var escena_actual = get_tree().current_scene
-	if escena_actual:
-		var audio = escena_actual.get_node_or_null("AudioStreamPlayer")
-		if audio and audio is AudioStreamPlayer and audio.playing:
-			Global.posicionAudio = audio.get_playback_position()
+	# Guardar la posicion exacta del audio en este instante preciso
+	var escenaActual = get_tree().current_scene
+	if escenaActual:
+		var reproductorAudio = escenaActual.get_node_or_null("AudioStreamPlayer")
+		if reproductorAudio and reproductorAudio is AudioStreamPlayer and reproductorAudio.playing:
+			Global.posicionAudio = reproductorAudio.get_playback_position()
 			Global.deberRestaurarAudio = true
 
 	call_deferred("_realizarCambioEscena")

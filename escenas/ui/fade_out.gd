@@ -1,10 +1,10 @@
 extends Sprite2D
 
-@onready var fade_out: Sprite2D = $"."
+@onready var desvanecer: Sprite2D = $"."
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	fade_out.visible = true
+	desvanecer.visible = true
 
 	pass # Replace with function body.
 

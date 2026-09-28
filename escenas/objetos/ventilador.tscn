@@ -17,7 +17,7 @@ colors = PackedColorArray(0, 0, 0, 1, 0.13580246, 0.13580246, 0.13580246, 1, 0.5
 
 [node name="Ventilador" type="Area2D" unique_id=520920194]
 script = ExtResource("1_kjlrq")
-fuerza_empuje = -400.0
+fuerzaEmpuje = -400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=910424624]
 position = Vector2(0, -4.5)

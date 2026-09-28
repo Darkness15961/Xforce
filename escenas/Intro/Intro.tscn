@@ -179,7 +179,7 @@ script = ExtResource("1_7sxhy")
 carlos = NodePath("Carlos")
 sinchi = NodePath("Sinchi")
 inti = NodePath("Inti")
-dialogue_resource = ExtResource("2_oauko")
+recursoDialogo = ExtResource("2_oauko")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1809859016]
 anchors_preset = 15

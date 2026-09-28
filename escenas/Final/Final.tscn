@@ -145,8 +145,8 @@ script = ExtResource("1_final")
 carlos = NodePath("Carlos")
 sinchi = NodePath("Sinchi")
 inti = NodePath("Inti")
-dialogue_resource = ExtResource("2_dialogue")
-dialogue_start_title = "ending"
+recursoDialogo = ExtResource("2_dialogue")
+tituloInicioDialogo = "ending"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

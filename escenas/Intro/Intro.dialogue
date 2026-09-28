@@ -1,5 +1,5 @@
 ~ start
-Carlos: ¿Dónde estoy?
+Carlos: ¿Donde estoy?
 do sacar_celular()
 Carlos: Mi celular no funciona.
 do guardar_celular()
@@ -17,42 +17,42 @@ Sinchi: ...
 ~ inti_appear
 do aparecer_inti()
 Inti: Tranquilos.
-Carlos: ¿Quién eres?
+Carlos: ¿Quien eres?
 Sinchi: ¿Pitaq kanki?
 Inti: Soy Inti.
-Inti: No han llegado aquí por accidente.
+Inti: No han llegado aqui por accidente.
 do calmarse()
-Carlos: ¿Por qué estamos aquí?
-Inti: Han sido traídos a un tiempo que no es el suyo.
+Carlos: ¿Por que estamos aqui?
+Inti: Han sido traidos a un tiempo que no es el suyo.
 Sinchi: ¿Imarayku kaypi kachkaniku?
 Inti: Porque algo importante se ha perdido.
 Inti: La Chakana fue destruida.
 Inti: Sus fragmentos quedaron separados entre distintos tiempos.
-Carlos: ¿Y qué tenemos que hacer?
+Carlos: ¿Y que tenemos que hacer?
 Inti: Encontrar sus fragmentos y volver a unirlos.
 Sinchi: ¿Imataq ruwasun?
-Inti: Tendrán que trabajar juntos.
+Inti: Tendran que trabajar juntos.
 Carlos: ¿Juntos?
 Sinchi: ...
 Inti: Aunque ahora no puedan entenderse...
 Inti: cada uno posee algo que el otro necesita.
-Inti: Solo trabajando en equipo podrán recuperar todos los fragmentos.
-Sinchi: ¿Chaymanta kutisunchik? / ¿Después podremos regresar?
-Inti: Sí.
+Inti: Solo trabajando en equipo podran recuperar todos los fragmentos.
+Sinchi: ¿Chaymanta kutisunchik? / ¿Despues podremos regresar?
+Inti: Si.
 Inti: Cuando la Chakana vuelva a estar completa...
-Inti: cada uno podrá regresar a su propio tiempo.
+Inti: cada uno podra regresar a su propio tiempo.
 => exchange
 
 
 ~ exchange
-Carlos: ¿Y tú nos ayudarás?
-Inti: Los guiaré cuando sea necesario.
-Inti: Pero el camino tendrán que recorrerlo ustedes.
+Carlos: ¿Y tu nos ayudaras?
+Inti: Los guiare cuando sea necesario.
+Inti: Pero el camino tendran que recorrerlo ustedes.
 Sinchi: ¿Qhipaman kutisunchik? / ¿Regresaremos a nuestros tiempos?
-Inti: Sí.
+Inti: Si.
 Inti: Si encuentran todos los fragmentos.
 Carlos: Entonces tenemos que hacerlo juntos.
-Inti: Así es.
+Inti: Asi es.
 => transition
 
 
@@ -60,7 +60,7 @@ Inti: Así es.
 Inti: Recuerden...
 Inti: Dos tiempos.
 Inti: Dos caminos.
-Inti: Una misma misión.
+Inti: Una misma mision.
 Sinchi: Tupananchiskama. / Hasta que volvamos a encontrarnos.
 Carlos: Hasta entonces.
 Inti: Que comience el camino.

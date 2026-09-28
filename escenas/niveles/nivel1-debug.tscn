@@ -251,7 +251,7 @@ position_smoothing_speed = 1.0
 position = Vector2(2283, 111)
 rotation = -1.5707964
 scale = Vector2(0.5, 0.5)
-siguiente_escena = "res://escenas/niveles/nivel3-debug.tscn"
+siguienteEscena = "res://escenas/niveles/nivel3-debug.tscn"
 
 [node name="Node" parent="." unique_id=1008914337 instance=ExtResource("18_vtxaw")]
 
