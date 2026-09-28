@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://b1d0gr0aspks"
+path="res://.godot/imported/Intro.dialogue-4a4ca6a961bd73661e743fe7febf126f.tres"
+
+[deps]
+
+source_file="res://escenas/Intro/Intro.dialogue"
+dest_files=["res://.godot/imported/Intro.dialogue-4a4ca6a961bd73661e743fe7febf126f.tres"]
+
+[params]
+
+defaults=true

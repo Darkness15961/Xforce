@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c31y1ut765yhs"]
 
-[ext_resource type="Texture2D" uid="uid://b73jcvpx0027q" path="res://Carpeta_NPCS/Sprites/Conquistador_Animation.png" id="1_6k45r"]
-[ext_resource type="Script" uid="uid://dupq6emp7mop5" path="res://Carpeta_NPCS/Scripts/conquistador.gd" id="1_mhb1f"]
+[ext_resource type="Texture2D" uid="uid://b73jcvpx0027q" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Conquistador_Animation.png" id="1_6k45r"]
+[ext_resource type="Script" uid="uid://dupq6emp7mop5" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Scripts/conquistador.gd" id="1_mhb1f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhb1f"]
 atlas = ExtResource("1_6k45r")
@@ -62,7 +62,8 @@ script = ExtResource("1_mhb1f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1959552456]
 sprite_frames = SubResource("SpriteFrames_c80uq")
-animation = &"Distraido"
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127886188]
 position = Vector2(0, 3.5)

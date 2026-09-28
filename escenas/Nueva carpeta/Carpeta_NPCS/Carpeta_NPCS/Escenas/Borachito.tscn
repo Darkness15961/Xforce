@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bn388e3nvmuv2"]
 
-[ext_resource type="Texture2D" uid="uid://bqftoyauvpr1n" path="res://Carpeta_NPCS/Sprites/Borrado_Animation.png" id="1_rprgd"]
-[ext_resource type="Script" uid="uid://b0ptcjdovw8b0" path="res://Carpeta_NPCS/Scripts/borachito.gd" id="1_ygm43"]
+[ext_resource type="Texture2D" uid="uid://bqftoyauvpr1n" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Borrado_Animation.png" id="1_rprgd"]
+[ext_resource type="Script" uid="uid://b0ptcjdovw8b0" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Scripts/borachito.gd" id="1_ygm43"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ygm43"]
 atlas = ExtResource("1_rprgd")

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cbdidxingvjc2"]
 
-[ext_resource type="Script" uid="uid://m2kyvmnwm4ge" path="res://escenas/dialogos/balloon.gd" id="1_36de5"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://c080qe0r5aeer" path="res://assets/fuentes/Minecraft.ttf" id="4_font"]
+[ext_resource type="Script" uid="uid://m2kyvmnwm4ge" path="res://dialogos/balloon.gd" id="1_414ji"]
+[ext_resource type="FontFile" uid="uid://c080qe0r5aeer" path="res://assets/fuentes/Minecraft.ttf" id="2_cnqbd"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="3_82fwd"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="4_xpmfd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_disabled"]
 content_margin_left = 12.0
@@ -90,7 +90,7 @@ shadow_color = Color(0, 0, 0, 0.5)
 shadow_size = 3
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
-default_font = ExtResource("4_font")
+default_font = ExtResource("2_cnqbd")
 default_font_size = 10
 Button/colors/font_color = Color(0.92, 0.92, 0.95, 1)
 Button/colors/font_disabled_color = Color(0.45, 0.45, 0.5, 0.6)
@@ -145,9 +145,9 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
-[node name="ExampleBalloon" type="CanvasLayer" unique_id=38036521]
+[node name="Balloon" type="CanvasLayer" unique_id=38036521]
 layer = 120
-script = ExtResource("1_36de5")
+script = ExtResource("1_414ji")
 
 [node name="Balloon" type="Control" parent="." unique_id=154399927]
 unique_name_in_owner = true
@@ -202,14 +202,14 @@ theme_override_colors/default_color = Color(1, 0.84, 0.31, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_fonts/normal_font = ExtResource("4_font")
+theme_override_fonts/normal_font = ExtResource("2_cnqbd")
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("3_82fwd")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -218,7 +218,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
 theme_override_constants/line_separation = 3
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
-theme_override_fonts/normal_font = ExtResource("4_font")
+theme_override_fonts/normal_font = ExtResource("2_cnqbd")
 theme_override_font_sizes/normal_font_size = 10
 text = "Dialogue..."
 
@@ -252,12 +252,12 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/separation = 4
 alignment = 2
-script = ExtResource("3_72ixx")
+script = ExtResource("4_xpmfd")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=1446810977]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_font")
+theme_override_fonts/font = ExtResource("2_cnqbd")
 theme_override_font_sizes/font_size = 10
 text = "Response example"
 alignment = 0
