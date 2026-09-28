@@ -23,6 +23,10 @@ var animacion_inicial_menu_vista: bool = false
 # Reproductor de música persistente para Menú y Créditos
 var reproductorMusicaMenu: AudioStreamPlayer = null
 
+# Variables contador de Items
+var Item_Celular: int = 0
+var Item_Chica: int = 0
+
 func reproducir_musica_menu() -> void:
 	if reproductorMusicaMenu == null:
 		reproductorMusicaMenu = AudioStreamPlayer.new()

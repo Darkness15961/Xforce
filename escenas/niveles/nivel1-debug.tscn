@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bqxf5dnimcifk" path="res://escenas/objetos/caja2.tscn" id="14_0ouot"]
 [ext_resource type="Texture2D" uid="uid://br2wrj43j7jon" path="res://assets/sprites/Chakana_Partes1.png" id="17_q03k7"]
 [ext_resource type="PackedScene" uid="uid://bod7nthfq8n4k" path="res://escenas/ui/Fade_Out.tscn" id="18_vtxaw"]
+[ext_resource type="Texture2D" uid="uid://b1rkyy858nuyn" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono2.png" id="19_vtxaw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_npltp"]
 texture = ExtResource("6_gajjf")
@@ -254,3 +255,21 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_q03k7")
 
 [node name="Node" parent="." unique_id=1008914337 instance=ExtResource("18_vtxaw")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=192084543]
+
+[node name="Icono1" type="Sprite2D" parent="CanvasLayer" unique_id=1129135283]
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("19_vtxaw")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=348333720]
+offset_left = 39.0
+offset_top = 5.0
+offset_right = 93.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
