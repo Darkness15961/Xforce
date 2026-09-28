@@ -1,0 +1,52 @@
+~ ending
+do aparecer_protagonistas()
+do aparecer_inti()
+Carlos: ¡Lo logramos!
+Sinchi: ¡Tukuyta huñuranchik! / ¡Lo reunimos todo!
+Inti: Sí.
+Inti: Han encontrado todos los fragmentos de la Chakana.
+Carlos: Pensé que nunca lo conseguiríamos.
+Sinchi: Ñuqapas. / Yo también.
+Carlos: ...
+Sinchi: ...
+Carlos: ¿Entendiste?
+Sinchi: ...
+Inti: Parece que ahora comienzan a entenderse.
+Carlos: Un poco.
+Sinchi: Pisi. / Un poco.
+Inti: Al principio caminaban separados.
+Inti: No podían comprenderse.
+Inti: Pero aprendieron a escucharse.
+Inti: A ayudarse.
+Inti: Y a confiar el uno en el otro.
+Carlos: Lo hicimos juntos.
+Sinchi: Yanapanakuspa. / Ayudándonos.
+Inti: Por eso la Chakana ha vuelto a estar completa.
+Inti: Y ahora puede abrir el camino de regreso.
+Carlos: ¿Volveremos a nuestras vidas?
+Inti: Sí.
+Inti: Cada uno regresará al tiempo al que pertenece.
+Sinchi: ¿Manachuqa kutimusaq? / ¿No volveremos a vernos?
+Inti: Los caminos pueden separarse...
+Inti: pero aquello que aprendieron juntos permanecerá.
+Carlos: Entonces...
+Carlos: Gracias.
+Sinchi: Sulpayki. / Gracias.
+Inti: Es hora.
+Inti: Que cada uno siga su camino.
+=> chakana_activate
+
+
+~ chakana_activate
+do activar_chakana()
+=> return
+
+
+~ return
+Carlos: ¡Espera!
+Carlos: ¿Volveremos a encontrarnos?
+Sinchi: Tupananchiskama. / Hasta que volvamos a encontrarnos.
+Inti: Quizá los caminos vuelvan a cruzarse.
+Inti: Pero eso...
+Inti: solo el tiempo lo sabe.
+=> END

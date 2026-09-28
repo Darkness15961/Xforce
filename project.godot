@@ -83,7 +83,7 @@ Pausa={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://escenas/Intro/Intro.dialogue")
+locale/translations_pot_files=PackedStringArray("res://escenas/Intro/Intro.dialogue", "res://escenas/Final/Final.dialogue", "res://dialogos/npcs.dialogue")
 
 [physics]
 

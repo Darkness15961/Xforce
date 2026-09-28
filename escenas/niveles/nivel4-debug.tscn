@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cjbdi6lqhlahq"]
 
+[ext_resource type="Script" path="res://escenas/niveles/nivel_4_debug.gd" id="1_n4script"]
 [ext_resource type="Texture2D" uid="uid://cr68i2kbhygpr" path="res://assets/sprites/Tiles_Lazos.png" id="1_aajs7"]
 [ext_resource type="Texture2D" uid="uid://7y4i6cabvcok" path="res://assets/sprites/Fondo_Cielo.png" id="2_l4b7a"]
 [ext_resource type="Texture2D" uid="uid://co5slfd0juhd0" path="res://assets/sprites/clouds_back.png" id="3_jsr40"]
@@ -16,6 +17,8 @@
 [ext_resource type="PackedScene" path="res://escenas/ui/GameOver.tscn" id="14_f4lbg"]
 [ext_resource type="Texture2D" uid="uid://b652oyqdd0dvj" path="res://assets/sprites/Fondo_arboles_Primer_Plano1 (1).png" id="15_36fim"]
 [ext_resource type="Texture2D" uid="uid://e66np0v8dfg8" path="res://assets/sprites/Chakana_Partes2.png" id="16_aajs7"]
+[ext_resource type="PackedScene" uid="uid://b7y2u1lhud2" path="res://escenas/ui/hud_nivel2.tscn" id="17_hud2"]
+[ext_resource type="PackedScene" uid="uid://dp6bvhw3x8y7q" path="res://escenas/objetos/Chacana.tscn" id="18_chacana"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2s1a6"]
 texture = ExtResource("1_aajs7")
@@ -106,7 +109,9 @@ texture = ExtResource("1_aajs7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_2s1a6")
 
-[node name="4" type="Node2D" unique_id=739585947]
+[node name="4" type="Node2D" unique_id=739585947 node_paths=PackedStringArray("reproductorAudio")]
+script = ExtResource("1_n4script")
+reproductorAudio = NodePath("AudioStreamPlayer")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=546596608]
 texture_filter = 1
@@ -115,7 +120,6 @@ tile_set = SubResource("TileSet_egqqu")
 
 [node name="Caja" parent="." unique_id=1689046605 instance=ExtResource("8_qmpkl")]
 position = Vector2(1161, 131)
-mass = 15.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=483116520]
 scroll_base_scale = Vector2(1, 0)
@@ -195,6 +199,7 @@ position_smoothing_speed = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=683970118]
 stream = ExtResource("11_sxje0")
+autoplay = true
 bus = &"Musica"
 parameters/looping = true
 
@@ -219,7 +224,10 @@ scale = Vector2(2, 2)
 texture = ExtResource("15_36fim")
 centered = false
 
-[node name="ChakanaPartes2" type="Sprite2D" parent="." unique_id=983383753]
+[node name="ChakanaParte2" parent="." unique_id=983383753 instance=ExtResource("18_chacana")]
 position = Vector2(672, 200)
 rotation = -1.5707964
-texture = ExtResource("16_aajs7")
+siguiente_escena = "res://escenas/Final/Final.tscn"
+textura = ExtResource("16_aajs7")
+
+[node name="HUD_Nivel2" parent="." instance=ExtResource("17_hud2")]

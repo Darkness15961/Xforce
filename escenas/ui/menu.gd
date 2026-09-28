@@ -73,7 +73,7 @@ func _on_button_pressed() -> void:
 	Global.posicionAudio = 0.0
 	Global.deberRestaurarAudio = false
 	Global.deberRestaurarPosicion = false
-	Global.cambiar_escena("res://escenas/niveles/nivel2-debug.tscn")
+	Global.cambiar_escena("res://escenas/Intro/Intro.tscn")
 
 # 2. Créditos: cambia a la escena de créditos independiente
 func _on_button_2_pressed() -> void:

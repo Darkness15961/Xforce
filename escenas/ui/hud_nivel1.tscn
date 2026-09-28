@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c8r3u2lhud1"]
+
+[ext_resource type="Script" path="res://escenas/ui/hud_nivel1.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://b1rkyy858nuyn" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono2.png" id="2_icono"]
+[ext_resource type="FontFile" uid="uid://c080qe0r5aeer" path="res://assets/fuentes/Minecraft.ttf" id="3_font"]
+
+[node name="HUD_Nivel1" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_script")
+
+[node name="Icono" type="Sprite2D" parent="."]
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
+texture = ExtResource("2_icono")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 38.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 20
+text = "0"
+vertical_alignment = 1

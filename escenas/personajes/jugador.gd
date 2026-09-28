@@ -18,6 +18,7 @@ var sfx_caja: AudioStreamPlayer
 var sfx_caida: AudioStreamPlayer
 
 func _ready() -> void:
+	add_to_group("Jugador")
 	if Global.deberRestaurarPosicion:
 		global_position = Global.posicionJugador
 		Global.deberRestaurarPosicion = false
@@ -66,6 +67,18 @@ func reproducir_caida() -> void:
 		sfx_caida.play()
 
 func _physics_process(delta: float) -> void:
+	if Global.en_dialogo:
+		velocity.x = 0.0
+		if not is_on_floor():
+			velocity.y += gravedad * delta
+		else:
+			velocity.y = 0.0
+			spriteAnimado.play("idle")
+		if sfx_pisadas and sfx_pisadas.playing:
+			sfx_pisadas.stop()
+		move_and_slide()
+		return
+
 	# Aplicación de gravedad y reinicio de saltos
 	if is_on_floor():
 		saltosRestantes = maxSaltos
@@ -112,24 +125,28 @@ func _physics_process(delta: float) -> void:
 			sfx_pisadas.stop()
 
 	# Empuje de objetos RigidBody2D y SFX de contacto con cajas
-	var tocando_caja: bool = false
+	var empujando_caja: bool = false
 	for i in get_slide_collision_count():
 		var colision = get_slide_collision(i)
 		var objeto = colision.get_collider()
 		
 		if objeto is RigidBody2D:
-			tocando_caja = true
-			var direccionEmpuje = -colision.get_normal()
-			direccionEmpuje.y = 0  # Evita empujar los objetos hacia abajo contra el suelo
-			objeto.apply_central_impulse(direccionEmpuje.normalized() * fuerzaEmpuje)
+			var normal = colision.get_normal()
+			# Solo empujar si el contacto es lateral y el jugador camina hacia la caja
+			if abs(normal.x) > 0.6:
+				var direccionEmpuje = -sign(normal.x)
+				if direccionHorizontal != 0 and sign(direccionHorizontal) == direccionEmpuje:
+					empujando_caja = true
+					var vel_objetivo = direccionHorizontal * (velocidad * 0.65)
+					objeto.linear_velocity.x = move_toward(objeto.linear_velocity.x, vel_objetivo, fuerzaEmpuje * delta * 8.0)
 
-	if tocando_caja:
+	if empujando_caja:
 		tiempo_sin_tocar_caja = 0.0
 		if sfx_caja and not sfx_caja.playing:
 			sfx_caja.play()
 	else:
 		tiempo_sin_tocar_caja += delta
-		if tiempo_sin_tocar_caja > 0.2 and sfx_caja and sfx_caja.playing:
+		if tiempo_sin_tocar_caja > 0.15 and sfx_caja and sfx_caja.playing:
 			sfx_caja.stop()
 
 	# Failsafe de caída al vacío si supera el límite inferior de la pantalla
