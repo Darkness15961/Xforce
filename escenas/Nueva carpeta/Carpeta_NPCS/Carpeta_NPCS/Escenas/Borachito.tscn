@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bn388e3nvmuv2"]
+
+[ext_resource type="Texture2D" uid="uid://bqftoyauvpr1n" path="res://Carpeta_NPCS/Sprites/Borrado_Animation.png" id="1_rprgd"]
+[ext_resource type="Script" uid="uid://b0ptcjdovw8b0" path="res://Carpeta_NPCS/Scripts/borachito.gd" id="1_ygm43"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygm43"]
+atlas = ExtResource("1_rprgd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_727db"]
+atlas = ExtResource("1_rprgd")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7dc3"]
+atlas = ExtResource("1_rprgd")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yc76"]
+atlas = ExtResource("1_rprgd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adpsa"]
+atlas = ExtResource("1_rprgd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c80uq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygm43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_727db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7dc3")
+}],
+"loop": 1,
+"name": &"Distraido",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yc76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adpsa")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rprgd"]
+size = Vector2(12, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygm43"]
+size = Vector2(42, 32)
+
+[node name="Borachito" type="CharacterBody2D" unique_id=1053135960]
+script = ExtResource("1_ygm43")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1975763029]
+sprite_frames = SubResource("SpriteFrames_c80uq")
+animation = &"Distraido"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1921234979]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_rprgd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1020886721]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=326001478]
+shape = SubResource("RectangleShape2D_ygm43")
+debug_color = Color(0.9608577, 5.7756904e-07, 0.51639014, 0.41960785)

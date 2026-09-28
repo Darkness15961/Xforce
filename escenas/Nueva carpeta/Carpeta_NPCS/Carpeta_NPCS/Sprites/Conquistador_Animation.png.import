@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcwmi6te8b4ya"
-path="res://.godot/imported/particula_hoja_horizontal.png-f12b04d05561acc4abe8709ce24ce935.ctex"
+uid="uid://b73jcvpx0027q"
+path="res://.godot/imported/Conquistador_Animation.png-4030974084c24ed1f035fb2e3f2b8ddb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/particula_hoja_horizontal.png"
-dest_files=["res://.godot/imported/particula_hoja_horizontal.png-f12b04d05561acc4abe8709ce24ce935.ctex"]
+source_file="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Conquistador_Animation.png"
+dest_files=["res://.godot/imported/Conquistador_Animation.png-4030974084c24ed1f035fb2e3f2b8ddb.ctex"]
 
 [params]
 

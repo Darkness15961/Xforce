@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://b2o5xcr1mcivx" path="res://assets/sprites/Fondo_Cerca.png" id="6_l3wov"]
 [ext_resource type="Texture2D" uid="uid://cpua5vm74cbyl" path="res://assets/sprites/clouds_front.png" id="6_ymuwt"]
 [ext_resource type="AudioStream" uid="uid://dm63hhrqm3wfv" path="res://assets/audio/01. CHACANA_PASADO GAMEJAM_V2.mp3" id="9_skire"]
-[ext_resource type="PackedScene" path="res://escenas/ui/Opcionesdepausa.tscn" id="11_ej3k1"]
-[ext_resource type="PackedScene" path="res://escenas/personajes/Jugador2.tscn" id="11_t3hjj"]
+[ext_resource type="PackedScene" uid="uid://b0v4o453tgg40" path="res://escenas/ui/Opcionesdepausa.tscn" id="11_ej3k1"]
+[ext_resource type="PackedScene" uid="uid://bnhga2qq3pasr" path="res://escenas/personajes/Jugador2.tscn" id="11_t3hjj"]
 [ext_resource type="PackedScene" uid="uid://c58oi5qy3y3tu" path="res://escenas/objetos/Transicion.tscn" id="12_trans"]
-[ext_resource type="PackedScene" path="res://escenas/objetos/Caja.tscn" id="13_caja"]
+[ext_resource type="PackedScene" uid="uid://bwhq6y1h8t2an" path="res://escenas/objetos/Caja.tscn" id="13_caja"]
 [ext_resource type="PackedScene" path="res://escenas/objetos/AreaCaida.tscn" id="14_caida"]
 [ext_resource type="Texture2D" uid="uid://b652oyqdd0dvj" path="res://assets/sprites/Fondo_arboles_Primer_Plano1 (1).png" id="14_k6aip"]
 [ext_resource type="PackedScene" path="res://escenas/ui/GameOver.tscn" id="15_gover"]
@@ -182,8 +182,7 @@ texture = ExtResource("6_l3wov")
 centered = false
 
 [node name="Caja" parent="." unique_id=146345042 instance=ExtResource("13_caja")]
-position = Vector2(1329, 40)
-gravity_scale = 1.0
+position = Vector2(1329, 38)
 
 [node name="Caja2" parent="." unique_id=372148389 instance=ExtResource("13_caja")]
 position = Vector2(1140, 119)
@@ -197,7 +196,8 @@ position = Vector2(-1712, 53)
 siguienteEscena = "res://escenas/niveles/nivel1-debug.tscn"
 
 [node name="Jugador2" parent="." unique_id=65163827 groups=["Jugador"] instance=ExtResource("11_t3hjj")]
-position = Vector2(50, 259)
+position = Vector2(72, 268)
+fuerzaEmpuje = 58.0
 
 [node name="Camera2D" type="Camera2D" parent="Jugador2" unique_id=2139830097]
 position = Vector2(1, 0)

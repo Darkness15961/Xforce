@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpua5vm74cbyl" path="res://assets/sprites/clouds_front.png" id="5_c7v6b"]
 [ext_resource type="Texture2D" uid="uid://nn7d5ubck2nh" path="res://assets/sprites/Tiles_Lazos_Presente2.png" id="6_gajjf"]
 [ext_resource type="Texture2D" uid="uid://cmdxxcvxxnvv3" path="res://assets/sprites/Fondo_Casas_Lejos_V4.png" id="6_npltp"]
-[ext_resource type="PackedScene" path="res://escenas/ui/Opcionesdepausa.tscn" id="7_oljpc"]
+[ext_resource type="PackedScene" uid="uid://b0v4o453tgg40" path="res://escenas/ui/Opcionesdepausa.tscn" id="7_oljpc"]
 [ext_resource type="PackedScene" uid="uid://c58oi5qy3y3tu" path="res://escenas/objetos/Transicion.tscn" id="8_trans"]
 [ext_resource type="PackedScene" path="res://escenas/objetos/AreaCaida.tscn" id="9_caida"]
 [ext_resource type="AudioStream" uid="uid://dyhwqsj7hojni" path="res://assets/audio/02. CHACANA PRESENTE OST_V1.mp3" id="10_0qd72"]
@@ -206,8 +206,10 @@ tile_set = SubResource("TileSet_g4v7s")
 
 [node name="Caja2" parent="." unique_id=1522867153 instance=ExtResource("14_0ouot")]
 position = Vector2(2016, 223)
-mass = 6.0
-gravity_scale = 0.7
+mass = 0.5
+center_of_mass_mode = 1
+inertia = 3.42
+lock_rotation = true
 
 [node name="Transicion" parent="." unique_id=1070814947 instance=ExtResource("8_trans")]
 position = Vector2(1385, 49)
@@ -231,7 +233,7 @@ visible = false
 color = Color(0.47007585, 0.47007585, 0.47007585, 1)
 
 [node name="Jugador" parent="." unique_id=1562687641 groups=["Jugador"] instance=ExtResource("2_170po")]
-position = Vector2(54, 266)
+position = Vector2(2081, 202)
 fuerzaEmpuje = 80.0
 
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=140573625]
@@ -246,7 +248,9 @@ position_smoothing_speed = 1.0
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1521883353]
 
 [node name="ChakanaPartes1" type="Sprite2D" parent="." unique_id=1742097781]
-position = Vector2(2289, 118)
+position = Vector2(2283, 111)
+rotation = -1.5707964
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_q03k7")
 
 [node name="Node" parent="." unique_id=1008914337 instance=ExtResource("18_vtxaw")]

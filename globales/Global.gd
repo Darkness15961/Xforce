@@ -53,6 +53,12 @@ var en_transicion: bool = false
 
 func _ready() -> void:
 	_crear_capa_transicion()
+	_inicializar_volumen_musica()
+
+func _inicializar_volumen_musica() -> void:
+	var bus_musica = AudioServer.get_bus_index("Musica")
+	if bus_musica != -1:
+		AudioServer.set_bus_volume_db(bus_musica, linear_to_db(0.75))
 
 func _crear_capa_transicion() -> void:
 	if capa_transicion != null and is_instance_valid(capa_transicion):

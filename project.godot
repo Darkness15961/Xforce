@@ -21,6 +21,11 @@ busses/default_bus_layout="res://default_bus_layout.tres"
 [autoload]
 
 Global="*uid://cutx1cdffcbjg"
+DialogueManager="*uid://c3rodes2l3gxb"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://escenas/dialogos/balloon.tscn"
 
 [display]
 
@@ -29,6 +34,10 @@ window/size/viewport_height=360
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [global_group]
 

@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://c58oi5qy3y3tu"]
 
 [ext_resource type="Script" uid="uid://diiynm6ch1q4d" path="res://escenas/objetos/transicion.gd" id="1_trans"]
+[ext_resource type="Shader" path="res://escenas/objetos/borde_interaccion.gdshader" id="2_shader"]
 [ext_resource type="Texture2D" uid="uid://cut0s82f27q8t" path="res://assets/sprites/monedaCambio.png" id="2_joym6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_outline"]
+resource_local_to_scene = true
+shader = ExtResource("2_shader")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_thickness = 1.0
+shader_parameter/enabled = false
+shader_parameter/pulse = true
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y705p"]
 atlas = ExtResource("2_joym6")
@@ -61,11 +70,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trans"]
+size = Vector2(40, 40)
 
 [node name="Transicion" type="Area2D" unique_id=2056414805]
 script = ExtResource("1_trans")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=539132954]
+material = SubResource("ShaderMaterial_outline")
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"si"

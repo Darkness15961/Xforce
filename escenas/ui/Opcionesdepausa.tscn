@@ -1,4 +1,4 @@
-﻿[gd_scene format=3 uid="uid://b0v4o453tgg40"]
+[gd_scene format=3 uid="uid://b0v4o453tgg40"]
 
 [ext_resource type="Script" uid="uid://dumbw8t4lnn5j" path="res://escenas/ui/opcionesdepausa.gd" id="1_c1117"]
 [ext_resource type="Theme" uid="uid://df7w8y1babnc4" path="res://default_theme.tres" id="2_theme"]
@@ -54,7 +54,7 @@ focus_neighbor_bottom = NodePath("../../HBoxContainer2/SFXSlider")
 focus_behavior_recursive = 2
 max_value = 1.0
 step = 0.01
-value = 0.5
+value = 1.0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer2" unique_id=2004509226]
 layout_mode = 2

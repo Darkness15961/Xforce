@@ -1,4 +1,4 @@
-﻿[gd_scene format=3 uid="uid://dhhjqfi452ab3"]
+[gd_scene format=3 uid="uid://bnhga2qq3pasr"]
 
 [ext_resource type="Script" uid="uid://cy4j5f3con4pr" path="res://escenas/personajes/jugador_2.gd" id="1_p8x16"]
 [ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje-Presente__.png" id="2_p8x16"]
