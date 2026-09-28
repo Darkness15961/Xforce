@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlos0ugobmmhr"]
 
-[ext_resource type="Script" uid="uid://flf71k74adbm" path="res://muerte.gd" id="1_mtl3m"]
+[ext_resource type="Script" uid="uid://flf71k74adbm" path="res://escenas/objetos/muerte.gd" id="1_mtl3m"]
 
 [node name="muerte" type="Area2D" unique_id=904949785]
 script = ExtResource("1_mtl3m")
