@@ -1,0 +1,18 @@
+﻿[gd_scene format=3 uid="uid://bwhq6y1h8t2an"]
+
+[ext_resource type="Texture2D" uid="uid://748ulaoinydp" path="res://assets/sprites/Cajas_1.png" id="1_qsyg6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_caja"]
+size = Vector2(46, 48)
+
+[node name="Caja" type="RigidBody2D" unique_id=1689046605]
+mass = 7.0
+gravity_scale = 0.4
+lock_rotation = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821222459]
+shape = SubResource("RectangleShape2D_caja")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1799437810]
+scale = Vector2(1.5, 1.58)
+texture = ExtResource("1_qsyg6")

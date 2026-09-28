@@ -1,0 +1,15 @@
+﻿[gd_scene format=3 uid="uid://cx8v6k3oaqy1m"]
+
+[ext_resource type="Script" uid="uid://diiynm6ch1q4d" path="res://escenas/objetos/transicion.gd" id="1_trans"]
+[ext_resource type="Texture2D" uid="uid://ditsrw2xgltcx" path="res://assets/ui/llave.png" id="2_llave"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trans"]
+
+[node name="Transicion" type="Area2D"]
+script = ExtResource("1_trans")
+
+[node name="Llave" type="Sprite2D" parent="."]
+texture = ExtResource("2_llave")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_trans")

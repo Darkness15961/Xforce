@@ -26,22 +26,18 @@ Global="*uid://cutx1cdffcbjg"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/mode=4
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep"
 window/stretch/scale_mode="integer"
 window/vsync/vsync_mode=0
-
-[gui]
-
-theme/custom="res://default_theme.tres"
-theme/custom_font="res://assets gamejam/Minecraft.ttf"
-theme/default_font_antialiasing=1
-theme/default_font_hinting=1
 
 [global_group]
 
 Jugador=""
+
+[gui]
+
+theme/custom="res://default_theme.tres"
+theme/custom_font="res://assets/fuentes/Minecraft.ttf"
 
 [input]
 
