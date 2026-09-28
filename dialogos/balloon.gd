@@ -133,6 +133,15 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+	match dialogue_line.character:
+		"Carlos":
+			character_label.add_theme_color_override("default_color", Color(0.55, 0.82, 1.0, 1.0))
+		"Sinchi":
+			character_label.add_theme_color_override("default_color", Color(0.55, 0.92, 0.55, 1.0))
+		"Inti":
+			character_label.add_theme_color_override("default_color", Color(1.0, 0.84, 0.31, 1.0))
+		_:
+			character_label.add_theme_color_override("default_color", Color(1.0, 0.84, 0.31, 1.0))
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line

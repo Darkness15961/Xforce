@@ -1,11 +1,66 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Carlos: ¿Dónde estoy?
+do sacar_celular()
+Carlos: Mi celular no funciona.
+do guardar_celular()
+do aparecer_sinchi()
+Sinchi: ¿Maypitaq kay?
+do carlos_mira_a_sinchi()
+Carlos: ...
+do mirarse_fijamente()
+Sinchi: ¿Pitaq kanki?
+Carlos: ?
+Sinchi: ...
+=> inti_appear
+
+
+~ inti_appear
+do aparecer_inti()
+Inti: Tranquilos.
+Carlos: ¿Quién eres?
+Sinchi: ¿Pitaq kanki?
+Inti: Soy Inti.
+Inti: No han llegado aquí por accidente.
+Carlos: ¿Por qué estamos aquí?
+Inti: Han sido traídos a un tiempo que no es el suyo.
+Sinchi: ¿Imarayku kaypi kachkaniku?
+Inti: Porque algo importante se ha perdido.
+Inti: La Chakana fue destruida.
+Inti: Sus fragmentos quedaron separados entre distintos tiempos.
+Carlos: ¿Y qué tenemos que hacer?
+Inti: Encontrar sus fragmentos y volver a unirlos.
+Sinchi: ¿Imataq ruwasun?
+Inti: Tendrán que trabajar juntos.
+Carlos: ¿Juntos?
+Sinchi: ...
+Inti: Aunque ahora no puedan entenderse...
+Inti: cada uno posee algo que el otro necesita.
+Inti: Solo trabajando en equipo podrán recuperar todos los fragmentos.
+Sinchi: ¿Chaymanta kutisunchik? / ¿Después podremos regresar?
+Inti: Sí.
+Inti: Cuando la Chakana vuelva a estar completa...
+Inti: cada uno podrá regresar a su propio tiempo.
+=> exchange
+
+
+~ exchange
+Carlos: ¿Y tú nos ayudarás?
+Inti: Los guiaré cuando sea necesario.
+Inti: Pero el camino tendrán que recorrerlo ustedes.
+Sinchi: ¿Qhipaman kutisunchik? / ¿Regresaremos a nuestros tiempos?
+Inti: Sí.
+Inti: Si encuentran todos los fragmentos.
+Carlos: Entonces tenemos que hacerlo juntos.
+Inti: Así es.
+=> transition
+
+
+~ transition
+Inti: Recuerden...
+Inti: Dos tiempos.
+Inti: Dos caminos.
+Inti: Una misma misión.
+Sinchi: Tupananchiskama. / Hasta que volvamos a encontrarnos.
+Carlos: Hasta entonces.
+Inti: Que comience el camino.
 => END

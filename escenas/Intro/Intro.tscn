@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dd3722agevcwi" path="res://escenas/Intro/scripts/intro.gd" id="1_7sxhy"]
 [ext_resource type="Texture2D" uid="uid://oweoowbsuci7" path="res://assets/sprites/personaje-Sheet.png" id="1_y2bjm"]
-[ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje-Presente__.png" id="2_7sxhy"]
+[ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje-Presente__.png" id="2_presente"]
 [ext_resource type="Resource" uid="uid://b1d0gr0aspks" path="res://escenas/Intro/Intro.dialogue" id="2_oauko"]
+[ext_resource type="Texture2D" uid="uid://4owi43slmw5r" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/inti.png" id="3_inti"]
+[ext_resource type="Texture2D" uid="uid://cnsjdx1xdkc8f" path="res://escenas/Intro/Sprites/personaje_telefono_spritesheet.png" id="4_phone"]
 [ext_resource type="PackedScene" uid="uid://b0v4o453tgg40" path="res://escenas/ui/Opcionesdepausa.tscn" id="5_oauko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u2ogb"]
@@ -30,7 +32,7 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("1_y2bjm")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_c80uq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_sinchi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -51,57 +53,132 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6h060")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 2.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8bdw"]
-atlas = ExtResource("2_7sxhy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp0"]
+atlas = ExtResource("2_presente")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i8e27"]
-atlas = ExtResource("2_7sxhy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp1"]
+atlas = ExtResource("2_presente")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gjufl"]
-atlas = ExtResource("2_7sxhy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp2"]
+atlas = ExtResource("2_presente")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k0r0t"]
-atlas = ExtResource("2_7sxhy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp3"]
+atlas = ExtResource("2_presente")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ghlby"]
-atlas = ExtResource("2_7sxhy")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp4"]
+atlas = ExtResource("2_presente")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_0uwc0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_phone0"]
+atlas = ExtResource("4_phone")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phone1"]
+atlas = ExtResource("4_phone")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phone2"]
+atlas = ExtResource("4_phone")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phone3"]
+atlas = ExtResource("4_phone")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_carlos"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w8bdw")
+"texture": SubResource("AtlasTexture_cp0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i8e27")
+"texture": SubResource("AtlasTexture_cp1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gjufl")
+"texture": SubResource("AtlasTexture_cp2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k0r0t")
+"texture": SubResource("AtlasTexture_cp3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ghlby")
+"texture": SubResource("AtlasTexture_cp4")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Idle",
-"speed": 5.0
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phone0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phone1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phone2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phone3")
+}],
+"loop": true,
+"name": &"celular_apagado",
+"speed": 2.0
 }]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1930714644 node_paths=PackedStringArray("personaje")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_inti0"]
+atlas = ExtResource("3_inti")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inti1"]
+atlas = ExtResource("3_inti")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inti2"]
+atlas = ExtResource("3_inti")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti1")
+}],
+"loop": true,
+"name": &"hablar",
+"speed": 3.0
+}]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1930714644 node_paths=PackedStringArray("carlos", "sinchi", "inti")]
 script = ExtResource("1_7sxhy")
-personaje = NodePath("Carlos")
+carlos = NodePath("Carlos")
+sinchi = NodePath("Sinchi")
+inti = NodePath("Inti")
 dialogue_resource = ExtResource("2_oauko")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1809859016]
@@ -111,16 +188,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Inti" type="AnimatedSprite2D" parent="." unique_id=1200000001]
+visible = false
+position = Vector2(320, 56)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_inti")
+animation = &"idle"
+
 [node name="Sinchi" type="AnimatedSprite2D" parent="." unique_id=1719787037]
+visible = false
 position = Vector2(132, 200)
 scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_c80uq")
+sprite_frames = SubResource("SpriteFrames_sinchi")
 animation = &"Idle"
 
 [node name="Carlos" type="AnimatedSprite2D" parent="." unique_id=793033406]
+visible = false
 position = Vector2(507, 198)
 scale = Vector2(-3, 3)
-sprite_frames = SubResource("SpriteFrames_0uwc0")
+sprite_frames = SubResource("SpriteFrames_carlos")
 animation = &"Idle"
 
 [node name="Button" type="Button" parent="." unique_id=185121165]
