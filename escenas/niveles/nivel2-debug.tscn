@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dm63hhrqm3wfv" path="res://assets/audio/01. CHACANA_PASADO GAMEJAM_V2.mp3" id="9_skire"]
 [ext_resource type="PackedScene" uid="uid://b0v4o453tgg40" path="res://escenas/ui/Opcionesdepausa.tscn" id="11_ej3k1"]
 [ext_resource type="PackedScene" uid="uid://bnhga2qq3pasr" path="res://escenas/personajes/Jugador2.tscn" id="11_t3hjj"]
+[ext_resource type="Texture2D" uid="uid://birjexefn6j3m" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono1.png" id="12_ll5nf"]
 [ext_resource type="PackedScene" uid="uid://c58oi5qy3y3tu" path="res://escenas/objetos/Transicion.tscn" id="12_trans"]
 [ext_resource type="PackedScene" uid="uid://bwhq6y1h8t2an" path="res://escenas/objetos/Caja.tscn" id="13_caja"]
 [ext_resource type="PackedScene" path="res://escenas/objetos/AreaCaida.tscn" id="14_caida"]
@@ -20,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://m2iv45v7syda" path="res://assets/sprites/Pinchos_Extendido.png" id="18_p4yq0"]
 [ext_resource type="PackedScene" uid="uid://bod7nthfq8n4k" path="res://escenas/ui/Fade_Out.tscn" id="19_r0sum"]
 [ext_resource type="PackedScene" uid="uid://c31y1ut765yhs" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Escenas/Conquistador.tscn" id="20_uys7m"]
+[ext_resource type="PackedScene" uid="uid://cy4lowh5ndmpn" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Escenas/Celular.tscn" id="21_xfo2d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymuwt"]
 texture = ExtResource("2_cg8o8")
@@ -196,7 +198,7 @@ siguienteEscena = "res://escenas/niveles/nivel1-debug.tscn"
 position = Vector2(-1712, 53)
 siguienteEscena = "res://escenas/niveles/nivel1-debug.tscn"
 
-[node name="Jugador2" parent="." unique_id=65163827 groups=["Jugador"] instance=ExtResource("11_t3hjj")]
+[node name="Jugador2" parent="." unique_id=65163827 instance=ExtResource("11_t3hjj")]
 position = Vector2(72, 268)
 fuerzaEmpuje = 58.0
 
@@ -248,5 +250,15 @@ texture = ExtResource("18_p4yq0")
 
 [node name="Node" parent="." unique_id=1008914337 instance=ExtResource("19_r0sum")]
 
-[node name="Conquistador" parent="." unique_id=987760709 instance=ExtResource("20_uys7m")]
-position = Vector2(278, 270)
+[node name="Conquistador" parent="." unique_id=987760709 node_paths=PackedStringArray("jugador") instance=ExtResource("20_uys7m")]
+position = Vector2(278, 273)
+jugador = NodePath("../Jugador2")
+
+[node name="Celular" parent="." unique_id=1600944000 instance=ExtResource("21_xfo2d")]
+position = Vector2(190, 273)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1642503074]
+
+[node name="Icono1" type="Sprite2D" parent="CanvasLayer" unique_id=2015771810]
+position = Vector2(10, 151)
+texture = ExtResource("12_ll5nf")
