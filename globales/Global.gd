@@ -154,4 +154,3 @@ func recargar_escena(duracion: float = 0.25) -> void:
 	
 	rect_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	en_transicion = false
-

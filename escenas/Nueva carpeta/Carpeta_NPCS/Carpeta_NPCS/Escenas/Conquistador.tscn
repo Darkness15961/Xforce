@@ -52,10 +52,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c80uq"]
-size = Vector2(12, 25)
+size = Vector2(12, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uwc0"]
-size = Vector2(42, 32)
+size = Vector2(69, 54)
 
 [node name="Conquistador" type="CharacterBody2D" unique_id=987760709]
 script = ExtResource("1_mhb1f")
@@ -66,13 +66,15 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127886188]
-position = Vector2(0, 3.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_c80uq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=228050851]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1125095788]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_0uwc0")
 debug_color = Color(0.9608577, 5.7756904e-07, 0.51639014, 0.41960785)
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

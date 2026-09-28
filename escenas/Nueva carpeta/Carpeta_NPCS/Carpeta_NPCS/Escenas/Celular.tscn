@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cy4lowh5ndmpn"]
 
-[ext_resource type="Texture2D" uid="uid://birjexefn6j3m" path="res://Carpeta_NPCS/Sprites/Icono1.png" id="1_bb0h7"]
-[ext_resource type="Script" uid="uid://jeoydnocndqw" path="res://Carpeta_NPCS/Scripts/celular.gd" id="1_gm0t1"]
+[ext_resource type="Texture2D" uid="uid://birjexefn6j3m" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono1.png" id="1_bb0h7"]
+[ext_resource type="Script" uid="uid://jeoydnocndqw" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Scripts/celular.gd" id="1_gm0t1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c80uq"]
-radius = 15.0
+radius = 31.0
 
 [node name="Celular" type="Area2D" unique_id=1600944000]
 script = ExtResource("1_gm0t1")
@@ -15,5 +15,5 @@ texture = ExtResource("1_bb0h7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273525541]
 shape = SubResource("CircleShape2D_c80uq")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="body_shape_exited" from="." to="." method="_on_body_shape_exited"]
