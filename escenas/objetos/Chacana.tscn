@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://escenas/objetos/chacana.gd" id="1_chacana"]
 [ext_resource type="Shader" path="res://escenas/objetos/borde_interaccion.gdshader" id="2_shader"]
-[ext_resource type="Texture2D" uid="uid://br2wrj43j7jon" path="res://assets/sprites/Chakana_Partes1.png" id="3_tex1"]
+[ext_resource type="Texture2D" uid="uid://br2wrj43j7jon" path="res://assets/sprites/chacana_partes_1.png" id="3_tex1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_chacana"]
 resource_local_to_scene = true

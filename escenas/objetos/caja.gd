@@ -2,6 +2,7 @@ extends RigidBody2D
 
 var sfxImpacto: AudioStreamPlayer2D = null
 var tiempoUltimoImpacto: float = 0.0
+var altoMitad: float = 14.0
 
 func _ready() -> void:
 	contact_monitor = true
@@ -18,14 +19,26 @@ func _ready() -> void:
 	materialFisica.bounce = 0.0
 	physics_material_override = materialFisica
 
-	# Correccion automatica de escala en formas de colision para evitar enganches con bordes de tiles
+	# Correccion automatica de escala en formas de colision y calculo de altura media
 	for hijo in get_children():
 		if hijo is CollisionShape2D and hijo.shape:
 			if hijo.scale != Vector2.ONE:
 				if hijo.shape is RectangleShape2D:
 					hijo.shape = hijo.shape.duplicate()
 					hijo.shape.size = hijo.shape.size * hijo.scale
+				elif hijo.shape is ConvexPolygonShape2D:
+					hijo.shape = hijo.shape.duplicate()
+					var puntosNuevos = PackedVector2Array()
+					for punto in hijo.shape.points:
+						puntosNuevos.append(punto * hijo.scale)
+					hijo.shape.points = puntosNuevos
 				hijo.scale = Vector2.ONE
+			
+			if hijo.shape is RectangleShape2D:
+				altoMitad = max(altoMitad, hijo.shape.size.y * 0.5)
+			elif hijo.shape is ConvexPolygonShape2D:
+				for punto in hijo.shape.points:
+					altoMitad = max(altoMitad, abs(punto.y))
 
 	if not body_entered.is_connected(_on_body_entered):
 		body_entered.connect(_on_body_entered)
@@ -47,16 +60,22 @@ func _integrate_forces(estado: PhysicsDirectBodyState2D) -> void:
 	
 	for i in range(cantidadContactos):
 		var normal = estado.get_contact_local_normal(i)
+		var posLocal = estado.get_contact_local_position(i)
+		
 		# Normal hacia arriba (normal.y < -0.6) indica contacto con el suelo
 		if normal.y < -0.6:
 			tocandoSuelo = true
-		# Normal horizontal (|normal.x| > 0.6) indica contacto con pared u obstaculo vertical
+		
+		# Normal horizontal (|normal.x| > 0.6) indica contacto lateral
 		if abs(normal.x) > 0.6:
-			tocandoPared = true
-			normalParedX = normal.x
-			# Si la velocidad se dirige contra la pared, anularla para evitar penetracion en los tiles
-			if (normal.x < 0.0 and estado.linear_velocity.x > 0.0) or (normal.x > 0.0 and estado.linear_velocity.x < 0.0):
-				estado.linear_velocity.x = 0.0
+			# Si el contacto esta en el borde inferior cerca del piso, se trata de una costura entre tiles de piso
+			var esCosturaPiso = (posLocal.y > altoMitad - 5.0)
+			if not esCosturaPiso:
+				tocandoPared = true
+				normalParedX = normal.x
+				# Si la velocidad se dirige contra una pared real, anularla para evitar penetracion en los tiles
+				if (normal.x < 0.0 and estado.linear_velocity.x > 0.0) or (normal.x > 0.0 and estado.linear_velocity.x < 0.0):
+					estado.linear_velocity.x = 0.0
 
 	# Friccion simulada solo en el suelo para detenerse suavemente cuando no la empujan
 	if tocandoSuelo:
@@ -69,6 +88,7 @@ func _integrate_forces(estado: PhysicsDirectBodyState2D) -> void:
 		# Evitar que se quede suspendida en el aire contra la pared
 		if estado.linear_velocity.y < 30.0 and estado.linear_velocity.y >= 0.0:
 			estado.linear_velocity.y = 30.0
+
 
 func _on_body_entered(_body: Node) -> void:
 	if tiempoUltimoImpacto > 0.25 and abs(linear_velocity.y) > 35.0:

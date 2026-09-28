@@ -2,12 +2,6 @@ extends Area2D
 
 var puedeInteractuar: bool = false
 
-#region Alias de compatibilidad
-var puede_Interactuar: bool:
-	get: return puedeInteractuar
-	set(val): puedeInteractuar = val
-#endregion
-
 func _process(_delta: float) -> void:
 	if puedeInteractuar and Input.is_action_just_pressed("Interact"):
 		Global.agregar_celular(1)

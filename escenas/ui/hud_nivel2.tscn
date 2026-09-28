@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7y2u1lhud2"]
 
 [ext_resource type="Script" path="res://escenas/ui/hud_nivel2.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://birjexefn6j3m" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono1.png" id="2_icono"]
+[ext_resource type="Texture2D" uid="uid://birjexefn6j3m" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/icono_celular.png" id="2_icono"]
 [ext_resource type="FontFile" uid="uid://c080qe0r5aeer" path="res://assets/fuentes/Minecraft.ttf" id="3_font"]
 
 [node name="HUD_Nivel2" type="CanvasLayer"]

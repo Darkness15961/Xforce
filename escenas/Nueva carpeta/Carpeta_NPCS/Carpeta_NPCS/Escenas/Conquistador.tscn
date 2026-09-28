@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c31y1ut765yhs"]
 
-[ext_resource type="Texture2D" uid="uid://b73jcvpx0027q" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Conquistador_Animation.png" id="1_6k45r"]
+[ext_resource type="Texture2D" uid="uid://b73jcvpx0027q" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/npc_conquistador.png" id="1_6k45r"]
 [ext_resource type="Script" uid="uid://dupq6emp7mop5" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Scripts/conquistador.gd" id="1_mhb1f"]
 [ext_resource type="FontFile" uid="uid://c080qe0r5aeer" path="res://assets/fuentes/Minecraft.ttf" id="3_font"]
 

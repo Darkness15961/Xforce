@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ditfatbfxtgwb"
-path="res://.godot/imported/Pinchos.png-1ee24b1cb30db4d67ecfa064b1319f32.ctex"
+uid="uid://dw4m5iwy0k1ob"
+path="res://.godot/imported/pinchos.png-25fb134a16359f637e4f9962a79af3c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Pinchos.png"
-dest_files=["res://.godot/imported/Pinchos.png-1ee24b1cb30db4d67ecfa064b1319f32.ctex"]
+source_file="res://assets/sprites/pinchos.png"
+dest_files=["res://.godot/imported/pinchos.png-25fb134a16359f637e4f9962a79af3c1.ctex"]
 
 [params]
 

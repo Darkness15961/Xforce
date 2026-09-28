@@ -1,8 +1,9 @@
 extends CanvasLayer
 
-## Cinematica final: Chakana completa. Tono calmado, sin musica de fondo.
+## Cinematica final: Chakana completa con musica de fondo.
 
 const ESCENA_CREDITOS := "res://escenas/ui/Creditos.tscn"
+const MUSICA_FINAL := "res://assets/audio/02. EL CABALLERO HUECO GAMEJAM OST.mp3"
 const SPEED_IDLE := 1.0
 const SPEED_HABLAR := 1.15
 
@@ -16,23 +17,14 @@ const SPEED_HABLAR := 1.15
 @export var recursoDialogo: DialogueResource
 @export var tituloInicioDialogo: String = "ending"
 
-#region Alias de compatibilidad
-var tiempo_espera: float:
-	get: return tiempoEspera
-	set(val): tiempoEspera = val
-
-var dialogue_resource: DialogueResource:
-	get: return recursoDialogo
-	set(val): recursoDialogo = val
-
-var dialogue_start_title: String:
-	get: return tituloInicioDialogo
-	set(val): tituloInicioDialogo = val
-#endregion
+@export_category("Configuracion de Audio")
+@export var musica: AudioStream
+@export var musicaDesde: float = 0.0
 
 var _yendoACreditos: bool = false
 var _posCarlos: Vector2 = Vector2.ZERO
 var _posSinchi: Vector2 = Vector2.ZERO
+var _reproductorMusica: AudioStreamPlayer
 
 func _ready() -> void:
 	Global.detener_musica_menu()
@@ -60,6 +52,7 @@ func _ready() -> void:
 	iniciar_secuencia()
 
 func iniciar_secuencia() -> void:
+	_iniciar_musica()
 	await get_tree().create_timer(tiempoEspera).timeout
 
 	if not DialogueManager.dialogue_ended.is_connected(_on_dialogue_ended):
@@ -71,6 +64,30 @@ func iniciar_secuencia() -> void:
 
 	if recursoDialogo:
 		DialogueManager.show_dialogue_balloon(recursoDialogo, tituloInicioDialogo, [self])
+
+func _iniciar_musica() -> void:
+	if _reproductorMusica and is_instance_valid(_reproductorMusica):
+		return
+	Global.detener_musica_menu()
+	_reproductorMusica = AudioStreamPlayer.new()
+	_reproductorMusica.name = "MusicaFinal"
+	_reproductorMusica.bus = &"Musica"
+	var stream: AudioStream = musica if musica else load(MUSICA_FINAL) as AudioStream
+	if stream is AudioStreamMP3:
+		(stream as AudioStreamMP3).loop = true
+	_reproductorMusica.stream = stream
+	add_child(_reproductorMusica)
+	_reproductorMusica.play(musicaDesde)
+
+func _detener_musica() -> void:
+	if _reproductorMusica and is_instance_valid(_reproductorMusica):
+		_reproductorMusica.stop()
+		_reproductorMusica.queue_free()
+		_reproductorMusica = null
+	Global.posicionAudio = 0.0
+
+func _exit_tree() -> void:
+	_detener_musica()
 
 #region Mutaciones del .dialogue
 
@@ -174,4 +191,5 @@ func _ir_a_creditos() -> void:
 		return
 	_yendoACreditos = true
 	_poner_en_idle()
+	_detener_musica()
 	get_tree().change_scene_to_file(ESCENA_CREDITOS)

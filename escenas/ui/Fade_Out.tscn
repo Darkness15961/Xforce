@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bod7nthfq8n4k"]
 
 [ext_resource type="Script" uid="uid://bkg6yssexpc8h" path="res://escenas/ui/fade_out.gd" id="1_cgldu"]
-[ext_resource type="Texture2D" uid="uid://dn5p7krqnm4cg" path="res://assets/ui/Fade_Out.png" id="1_t5j2w"]
+[ext_resource type="Texture2D" uid="uid://dn5p7krqnm4cg" path="res://assets/ui/ui_desvanecer.png" id="1_t5j2w"]
 
 [sub_resource type="Animation" id="Animation_e484t"]
 resource_name = "Fade_out"

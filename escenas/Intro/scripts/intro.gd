@@ -19,19 +19,7 @@ const NERVIOS_OFFSET := 8.0
 @export var recursoDialogo: DialogueResource
 @export var tituloInicioDialogo: String = "start"
 
-#region Alias de compatibilidad
-var tiempo_espera: float:
-	get: return tiempoEspera
-	set(val): tiempoEspera = val
 
-var dialogue_resource: DialogueResource:
-	get: return recursoDialogo
-	set(val): recursoDialogo = val
-
-var dialogue_start_title: String:
-	get: return tituloInicioDialogo
-	set(val): tituloInicioDialogo = val
-#endregion
 
 var _yendoANivel: bool = false
 var _posCarlos: Vector2 = Vector2.ZERO
