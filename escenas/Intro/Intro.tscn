@@ -2,11 +2,51 @@
 
 [ext_resource type="Script" uid="uid://dd3722agevcwi" path="res://escenas/Intro/scripts/intro.gd" id="1_7sxhy"]
 [ext_resource type="Texture2D" uid="uid://oweoowbsuci7" path="res://assets/sprites/personaje-Sheet.png" id="1_y2bjm"]
-[ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje-Presente__.png" id="2_presente"]
 [ext_resource type="Resource" uid="uid://b1d0gr0aspks" path="res://escenas/Intro/Intro.dialogue" id="2_oauko"]
+[ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje-Presente__.png" id="2_presente"]
 [ext_resource type="Texture2D" uid="uid://4owi43slmw5r" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/inti.png" id="3_inti"]
 [ext_resource type="Texture2D" uid="uid://cnsjdx1xdkc8f" path="res://escenas/Intro/Sprites/personaje_telefono_spritesheet.png" id="4_phone"]
 [ext_resource type="PackedScene" uid="uid://b0v4o453tgg40" path="res://escenas/ui/Opcionesdepausa.tscn" id="5_oauko"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inti0"]
+atlas = ExtResource("3_inti")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inti1"]
+atlas = ExtResource("3_inti")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inti2"]
+atlas = ExtResource("3_inti")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti1")
+}],
+"loop": 1,
+"name": &"hablar",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inti0")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 1.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u2ogb"]
 atlas = ExtResource("1_y2bjm")
@@ -53,7 +93,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6h060")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle",
 "speed": 2.0
 }]
@@ -112,7 +152,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cp4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Idle",
 "speed": 2.0
 }, {
@@ -129,49 +169,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_phone3")
 }],
-"loop": true,
+"loop": 1,
 "name": &"celular_apagado",
 "speed": 2.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_inti0"]
-atlas = ExtResource("3_inti")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_inti1"]
-atlas = ExtResource("3_inti")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_inti2"]
-atlas = ExtResource("3_inti")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_inti"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_inti0")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_inti0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_inti1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_inti2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_inti1")
-}],
-"loop": true,
-"name": &"hablar",
-"speed": 3.0
 }]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1930714644 node_paths=PackedStringArray("carlos", "sinchi", "inti")]

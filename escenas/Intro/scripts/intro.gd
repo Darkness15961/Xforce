@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const NIVEL_1 := "res://escenas/niveles/nivel1-debug.tscn"
+const NIVEL_1 := "res://escenas/niveles/nivel2-debug.tscn"
 const MUSICA_INTRO := "res://assets/audio/02. EL CABALLERO HUECO GAMEJAM OST.mp3"
 const MUSICA_DESDE := 57.7
 const SPEED_IDLE := 1.0

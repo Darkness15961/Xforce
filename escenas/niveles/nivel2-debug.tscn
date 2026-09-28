@@ -202,7 +202,6 @@ siguienteEscena = "res://escenas/niveles/nivel1-debug.tscn"
 
 [node name="Jugador2" parent="." unique_id=65163827 instance=ExtResource("11_t3hjj")]
 position = Vector2(73, 268)
-fuerzaEmpuje = 58.0
 
 [node name="Camera2D" type="Camera2D" parent="Jugador2" unique_id=2139830097]
 position = Vector2(1, 0)
