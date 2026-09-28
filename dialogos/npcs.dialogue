@@ -1,0 +1,49 @@
+~ borracho_bloqueo
+Borrachito: ¡Hic!... ¡Eeeh tú! ¡No puedes pasar de aquí, compadre!
+Borrachito: Este camino está cerra'o... Tengo la garganta más seca que el desierto... ¡Hic!
+if Global.Item_Chica > 0
+	Borrachito: ¡Espera un ratito!... ¡Huelo a chicha de jora bendita!... ¿Me convidas un traguito?
+	- Toma, aquí tienes un poco de chicha.
+		do distraer()
+		Borrachito: ¡Ay caracho! ¡La sagrada chicha de jora! ¡Pasa nomás compadre, que te vaya de maravilla!... ¡Hic!
+		=> END
+	- No, esta chicha es mía.
+		Borrachito: ¡Pues enton's no pasas de aquí ni a la fuerza!... ¡Hic!
+		=> END
+else
+	Borrachito: Si me consigues un poco de chicha para la garganta, tal vez te deje pasar... ¡Hic!
+	- Iré a buscar chicha.
+		Borrachito: ¡Apúrate compadre, que se me seca el alma!... ¡Hic!
+		=> END
+	- ¡Por favor, déjame cruzar!
+		Borrachito: ¡De aquí no pasa nadie sin chicha!... ¡Hic!
+		=> END
+
+~ borracho_distraido
+Borrachito: ¡Hic!... ¡Qué buena está esta chicha!... Pasa nomás, compadre... ¡Salud!... ¡Hic!
+=> END
+
+~ conquistador_bloqueo
+Conquistador: ¡Alto ahí, forastero! ¡Por orden de la Corona, no podéis pasar de aquí!
+Conquistador: Estas tierras están bajo jurisdicción de Su Majestad. Nadie cruza sin un salvoconducto o un valioso tributo.
+if Global.Item_Celular > 0
+	Conquistador: Mas aguardad... ¿qué clase de sortilegio reluce en vuestras manos? ¡Parece un espejo mágico que destella colores!
+	- Ten, toma este celular.
+		do distraer()
+		Conquistador: ¡Pardiez! ¡Muestra imágenes vivientes en su interior! ¡Es una hechicería maravillosa! ¡Pasad, pasad mientras examino este prodigio!
+		=> END
+	- No pienso darte mi celular.
+		Conquistador: ¡Pues entonces os quedaréis ahí, villano! ¡No podéis pasar de aquí sin pagar tributo!
+		=> END
+else
+	Conquistador: Si no traéis nada digno con qué agasajar a un hidalgo de la Corona, no franquearé el paso.
+	- Buscaré algo de valor.
+		Conquistador: ¡Hacedlo con presteza, que no tengo paciencia para vagabundos!
+		=> END
+	- ¡Necesito pasar ahora mismo!
+		Conquistador: ¡He dicho que alto! ¡De aquí no pasa nadie sin autorización real!
+		=> END
+
+~ conquistador_distraido
+Conquistador: ¡Por Santiago y la Corona! ¿Cómo funcionan estos botones y lucecillas?... ¡Pasad de largo y no interrumpáis mi estudio!
+=> END

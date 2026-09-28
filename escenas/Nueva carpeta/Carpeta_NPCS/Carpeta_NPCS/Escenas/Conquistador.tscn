@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b73jcvpx0027q" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Conquistador_Animation.png" id="1_6k45r"]
 [ext_resource type="Script" uid="uid://dupq6emp7mop5" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Scripts/conquistador.gd" id="1_mhb1f"]
+[ext_resource type="FontFile" uid="uid://c080qe0r5aeer" path="res://assets/fuentes/Minecraft.ttf" id="3_font"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhb1f"]
 atlas = ExtResource("1_6k45r")
@@ -52,10 +53,26 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c80uq"]
-size = Vector2(12, 19)
+size = Vector2(24, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uwc0"]
-size = Vector2(69, 54)
+size = Vector2(70, 133)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_burbuja"]
+content_margin_left = 6.0
+content_margin_top = 3.0
+content_margin_right = 6.0
+content_margin_bottom = 3.0
+bg_color = Color(0.0980392, 0.0862745, 0.156863, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.921569, 0.768627, 0.352941, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [node name="Conquistador" type="CharacterBody2D" unique_id=987760709]
 script = ExtResource("1_mhb1f")
@@ -66,15 +83,38 @@ animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127886188]
-position = Vector2(0, 0.5)
+position = Vector2(0, -44)
 shape = SubResource("RectangleShape2D_c80uq")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=228050851]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1125095788]
-position = Vector2(0.5, 0)
+position = Vector2(0, -41.5)
 shape = SubResource("RectangleShape2D_0uwc0")
 debug_color = Color(0.9608577, 5.7756904e-07, 0.51639014, 0.41960785)
+
+[node name="BurbujaDialogo" type="PanelContainer" parent="." unique_id=2081928374]
+visible = false
+z_index = 30
+offset_left = -75.0
+offset_top = -48.0
+offset_right = 75.0
+offset_bottom = -18.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_burbuja")
+
+[node name="Texto" type="Label" parent="BurbujaDialogo" unique_id=1498273615]
+custom_minimum_size = Vector2(138, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.08, 0.12, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 9
+text = "¡No puedes pasar de aquí!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

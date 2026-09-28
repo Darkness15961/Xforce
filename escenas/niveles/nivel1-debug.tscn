@@ -18,7 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://bqxf5dnimcifk" path="res://escenas/objetos/caja2.tscn" id="14_0ouot"]
 [ext_resource type="Texture2D" uid="uid://br2wrj43j7jon" path="res://assets/sprites/Chakana_Partes1.png" id="17_q03k7"]
 [ext_resource type="PackedScene" uid="uid://bod7nthfq8n4k" path="res://escenas/ui/Fade_Out.tscn" id="18_vtxaw"]
-[ext_resource type="Texture2D" uid="uid://b1rkyy858nuyn" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono2.png" id="19_vtxaw"]
+[ext_resource type="PackedScene" uid="uid://c8r3u2lhud1" path="res://escenas/ui/hud_nivel1.tscn" id="19_hud1"]
+[ext_resource type="PackedScene" uid="uid://dp6bvhw3x8y7q" path="res://escenas/objetos/Chacana.tscn" id="20_chacana"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_npltp"]
 texture = ExtResource("6_gajjf")
@@ -206,11 +207,9 @@ tile_map_data = PackedByteArray("AAAAABQAAAACAAIAAAAAABUAAAACAAIAAAAAABYAAAACAAI
 tile_set = SubResource("TileSet_g4v7s")
 
 [node name="Caja2" parent="." unique_id=1522867153 instance=ExtResource("14_0ouot")]
-position = Vector2(2016, 223)
-mass = 0.5
-center_of_mass_mode = 1
-inertia = 3.42
-lock_rotation = true
+position = Vector2(2016, 220)
+mass = 0.54
+gravity_scale = 0.1
 
 [node name="Transicion" parent="." unique_id=1070814947 instance=ExtResource("8_trans")]
 position = Vector2(1385, 49)
@@ -235,7 +234,7 @@ color = Color(0.47007585, 0.47007585, 0.47007585, 1)
 
 [node name="Jugador" parent="." unique_id=1562687641 groups=["Jugador"] instance=ExtResource("2_170po")]
 position = Vector2(2081, 202)
-fuerzaEmpuje = 80.0
+fuerzaEmpuje = 200.0
 
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=140573625]
 position = Vector2(1, 0)
@@ -248,28 +247,12 @@ position_smoothing_speed = 1.0
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1521883353]
 
-[node name="ChakanaPartes1" type="Sprite2D" parent="." unique_id=1742097781]
+[node name="ChacanaParte1" parent="." unique_id=1742097781 instance=ExtResource("20_chacana")]
 position = Vector2(2283, 111)
 rotation = -1.5707964
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("17_q03k7")
+siguiente_escena = "res://escenas/niveles/nivel3-debug.tscn"
 
 [node name="Node" parent="." unique_id=1008914337 instance=ExtResource("18_vtxaw")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=192084543]
-
-[node name="Icono1" type="Sprite2D" parent="CanvasLayer" unique_id=1129135283]
-position = Vector2(20, 20)
-scale = Vector2(2, 2)
-texture = ExtResource("19_vtxaw")
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=348333720]
-offset_left = 39.0
-offset_top = 5.0
-offset_right = 93.0
-offset_bottom = 36.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="HUD_Nivel1" parent="." unique_id=184134354 instance=ExtResource("19_hud1")]
