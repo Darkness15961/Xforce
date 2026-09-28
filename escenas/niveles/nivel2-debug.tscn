@@ -185,10 +185,12 @@ texture = ExtResource("6_l3wov")
 centered = false
 
 [node name="Caja" parent="." unique_id=146345042 instance=ExtResource("13_caja")]
-position = Vector2(1329, 38)
+position = Vector2(1329, 32)
+mass = 15.0
 
 [node name="Caja2" parent="." unique_id=372148389 instance=ExtResource("13_caja")]
-position = Vector2(1140, 119)
+position = Vector2(1140, 112)
+mass = 15.0
 
 [node name="Transicion2" parent="." unique_id=1035309836 instance=ExtResource("12_trans")]
 position = Vector2(2040, 222)
@@ -199,7 +201,7 @@ position = Vector2(-1712, 53)
 siguienteEscena = "res://escenas/niveles/nivel1-debug.tscn"
 
 [node name="Jugador2" parent="." unique_id=65163827 instance=ExtResource("11_t3hjj")]
-position = Vector2(72, 268)
+position = Vector2(73, 268)
 fuerzaEmpuje = 58.0
 
 [node name="Camera2D" type="Camera2D" parent="Jugador2" unique_id=2139830097]
@@ -260,5 +262,5 @@ position = Vector2(190, 273)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1642503074]
 
 [node name="Icono1" type="Sprite2D" parent="CanvasLayer" unique_id=2015771810]
-position = Vector2(10, 151)
+position = Vector2(10, 11)
 texture = ExtResource("12_ll5nf")
