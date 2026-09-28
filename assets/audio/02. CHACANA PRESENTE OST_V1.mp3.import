@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyhwqsj7hojni"
+path="res://.godot/imported/02. CHACANA PRESENTE OST_V1.mp3-fc95699872285cb5a3628cec31e79f41.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/02. CHACANA PRESENTE OST_V1.mp3"
+dest_files=["res://.godot/imported/02. CHACANA PRESENTE OST_V1.mp3-fc95699872285cb5a3628cec31e79f41.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,14 @@
+﻿[gd_scene format=3 uid="uid://df5m2v7b8yq9p"]
+
+[ext_resource type="Script" uid="uid://wjeht2euouwi" path="res://escenas/objetos/area_caida.gd" id="1_caida"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_caida"]
+size = Vector2(50000, 400)
+
+[node name="AreaCaida" type="Area2D"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_caida")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_caida")
