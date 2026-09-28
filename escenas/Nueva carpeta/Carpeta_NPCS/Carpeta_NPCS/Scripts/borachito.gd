@@ -6,7 +6,7 @@ var puede_interactuar: bool = false
 
 
 func _process(_delta: float) -> void:
-	if puede_interactuar and Input.is_action_just_pressed("Interactuar"):
+	if puede_interactuar and Input.is_action_just_pressed("Interact"):
 		anim.play("Distraido")
 		collision_layer = 2
 		#Codigo para restar 1 al valor del item

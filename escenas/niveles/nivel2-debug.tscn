@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dlos0ugobmmhr" path="res://escenas/objetos/muerte.tscn" id="15_yfff1"]
 [ext_resource type="Texture2D" uid="uid://m2iv45v7syda" path="res://assets/sprites/Pinchos_Extendido.png" id="18_p4yq0"]
 [ext_resource type="PackedScene" uid="uid://bod7nthfq8n4k" path="res://escenas/ui/Fade_Out.tscn" id="19_r0sum"]
+[ext_resource type="PackedScene" uid="uid://c31y1ut765yhs" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Escenas/Conquistador.tscn" id="20_uys7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymuwt"]
 texture = ExtResource("2_cg8o8")
@@ -246,3 +247,6 @@ position = Vector2(1256, 256)
 texture = ExtResource("18_p4yq0")
 
 [node name="Node" parent="." unique_id=1008914337 instance=ExtResource("19_r0sum")]
+
+[node name="Conquistador" parent="." unique_id=987760709 instance=ExtResource("20_uys7m")]
+position = Vector2(278, 270)
