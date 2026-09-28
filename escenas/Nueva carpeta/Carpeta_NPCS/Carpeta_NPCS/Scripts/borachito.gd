@@ -4,6 +4,7 @@ var puede_interactuar: bool = false
 @export var jugador: CharacterBody2D 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
+var Item_Usado:bool = true
 func _process(_delta: float) -> void:
 	if not jugador:
 		return
@@ -11,6 +12,11 @@ func _process(_delta: float) -> void:
 	if puede_interactuar and Input.is_action_just_pressed("Interact"):
 		anim.play("Distraido")
 		collision_layer = 2
+		if Item_Usado:
+			Global.Item_Chica -= 1
+			Item_Usado = false
+		elif Item_Usado == false:
+			pass
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Jugador"):

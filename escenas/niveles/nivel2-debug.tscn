@@ -253,14 +253,33 @@ texture = ExtResource("18_p4yq0")
 [node name="Node" parent="." unique_id=1008914337 instance=ExtResource("19_r0sum")]
 
 [node name="Conquistador" parent="." unique_id=987760709 node_paths=PackedStringArray("jugador") instance=ExtResource("20_uys7m")]
-position = Vector2(278, 273)
+position = Vector2(285, 273)
 jugador = NodePath("../Jugador2")
 
 [node name="Celular" parent="." unique_id=1600944000 instance=ExtResource("21_xfo2d")]
-position = Vector2(190, 273)
+position = Vector2(143, 273)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1642503074]
 
 [node name="Icono1" type="Sprite2D" parent="CanvasLayer" unique_id=2015771810]
-position = Vector2(10, 11)
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
 texture = ExtResource("12_ll5nf")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=227170087]
+offset_left = 39.0
+offset_top = 5.0
+offset_right = 93.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Conquistador2" parent="." unique_id=311491949 node_paths=PackedStringArray("jugador") instance=ExtResource("20_uys7m")]
+position = Vector2(1181, 320)
+jugador = NodePath("../Jugador2")
+
+[node name="Celular2" parent="." unique_id=437116878 instance=ExtResource("21_xfo2d")]
+position = Vector2(880, 291)

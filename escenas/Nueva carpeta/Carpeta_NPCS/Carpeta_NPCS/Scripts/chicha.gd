@@ -4,6 +4,7 @@ var puede_Interactuar: bool = false
 
 func _process(delta: float) -> void:
 	if puede_Interactuar and Input.is_action_just_pressed("Interact"):
+		Global.Item_Chica += 1
 		queue_free() # No hace falta $".", basta con llamar a queue_free()
 		# Código para aumentar el valor del item en el global.
 

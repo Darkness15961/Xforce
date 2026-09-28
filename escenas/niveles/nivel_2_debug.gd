@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var reproductorAudio: AudioStreamPlayer
+@onready var label: Label = $CanvasLayer/Label
 
 func _ready() -> void:
 	Global.detener_musica_menu()
@@ -18,6 +19,7 @@ func _ready() -> void:
 			reproductorAudio.play()
 
 func _process(_delta: float) -> void:
+	label.text = str(Global.Item_Celular)
 	# Mantiene actualizada en todo momento la posición exacta de reproducción
 	if reproductorAudio and reproductorAudio.playing:
 		Global.posicionAudio = reproductorAudio.get_playback_position()
