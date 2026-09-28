@@ -1,16 +1,15 @@
-﻿[gd_scene format=4 uid="uid://c1pkl0dslqd7r"]
+[gd_scene format=4 uid="uid://duej3sv2stsns"]
 
 [ext_resource type="Script" uid="uid://c1sbmiqygrdri" path="res://escenas/ui/menu.gd" id="1_juveg"]
 [ext_resource type="Texture2D" uid="uid://7y4i6cabvcok" path="res://assets/sprites/Fondo_Cielo.png" id="2_6fswf"]
 [ext_resource type="Texture2D" uid="uid://cr68i2kbhygpr" path="res://assets/sprites/Tiles_Lazos.png" id="2_juveg"]
 [ext_resource type="Texture2D" uid="uid://cffrm5vdeeipv" path="res://assets/sprites/Fondo_Montaña.png" id="3_bc54p"]
-[ext_resource type="AudioStream" uid="uid://b8iejiydn3ou3" path="res://assets/audio/SAMIY-GAMEJAM-OST-1.mp3" id="3_v6yed"]
 [ext_resource type="Texture2D" uid="uid://cj4wmqbkbwm8t" path="res://assets/sprites/Fondo_Casas.png" id="4_043lm"]
 [ext_resource type="Texture2D" uid="uid://b2o5xcr1mcivx" path="res://assets/sprites/Fondo_Cerca.png" id="5_iesyu"]
 [ext_resource type="Texture2D" uid="uid://oweoowbsuci7" path="res://assets/sprites/personaje-Sheet.png" id="5_svuvw"]
 [ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje-Presente__.png" id="8_6fswf"]
 [ext_resource type="Texture2D" uid="uid://t0nwc1b4a0eq" path="res://assets/sprites/Sprite-0002-Recovered.png" id="9_iuxab"]
-[ext_resource type="Theme" uid="uid://df7w8y1a9bnc4" path="res://default_theme.tres" id="10_theme"]
+[ext_resource type="Theme" uid="uid://df7w8y1babnc4" path="res://default_theme.tres" id="10_theme"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bc54p"]
 texture = ExtResource("2_juveg")
@@ -482,13 +481,6 @@ texture_filter = 1
 tile_map_data = PackedByteArray("AAD7/xIAAAABAAAAAAD7/xMAAAABAAEAAAD8/xIAAAABAAAAAAD8/xMAAAABAAEAAAD9/xIAAAABAAAAAAD9/xMAAAABAAEAAAD+/xIAAAABAAAAAAD+/xMAAAABAAEAAAD//xIAAAABAAAAAAD//xMAAAABAAEAAAAAABIAAAABAAAAAAAAABMAAAABAAEAAAABABIAAAABAAAAAAABABMAAAABAAEAAAACABIAAAABAAAAAAACABMAAAABAAEAAAADABIAAAABAAAAAAADABMAAAABAAEAAAAEABIAAAABAAAAAAAEABMAAAABAAEAAAAFABIAAAABAAAAAAAFABMAAAABAAEAAAAGABIAAAABAAAAAAAGABMAAAABAAEAAAAHABIAAAABAAAAAAAHABMAAAABAAEAAAAIABIAAAABAAAAAAAIABMAAAABAAEAAAAJABIAAAABAAAAAAAJABMAAAABAAEAAAAKABIAAAABAAAAAAAKABMAAAABAAEAAAALABIAAAABAAAAAAALABMAAAABAAEAAAAMABIAAAABAAAAAAAMABMAAAABAAEAAAAZABIAAAACAAAAAAAZABMAAAACAAEAAAAaABIAAAACAAAAAAAbABIAAAACAAAAAAAcABIAAAACAAAAAAAcABMAAAACAAEAAAAdABIAAAACAAAAAAAdABMAAAACAAEAAAAeABIAAAACAAAAAAAeABMAAAACAAEAAAAfABIAAAACAAAAAAAfABMAAAACAAEAAAAgABIAAAACAAAAAAAgABMAAAACAAEAAAAhABIAAAACAAAAAAAhABMAAAACAAEAAAAiABIAAAABAAAAAAAiABMAAAABAAEAAAAjABIAAAABAAAAAAAjABMAAAABAAEAAAAkABIAAAABAAAAAAAkABMAAAABAAEAAAAlABIAAAABAAAAAAAlABMAAAACAAEAAAAmABIAAAABAAAAAAAmABMAAAACAAEAAAAnABIAAAABAAAAAAAnABMAAAABAAEAAAAoABIAAAABAAAAAAAoABMAAAABAAEAAAApABIAAAABAAAAAAApABMAAAABAAEAAAAqABIAAAABAAAAAAAqABMAAAABAAEAAAArABIAAAABAAAAAAArABMAAAABAAEAAAD7/xQAAAABAAIAAAD7/xUAAAABAAIAAAD7/xYAAAABAAIAAAD7/xcAAAABAAIAAAD7/xgAAAABAAIAAAD7/xkAAAABAAIAAAD8/xQAAAABAAIAAAD8/xUAAAABAAIAAAD8/xYAAAABAAIAAAD8/xcAAAABAAIAAAD8/xgAAAABAAIAAAD8/xkAAAABAAIAAAD9/xQAAAABAAIAAAD9/xUAAAABAAIAAAD9/xYAAAABAAIAAAD9/xcAAAABAAIAAAD9/xgAAAABAAIAAAD9/xkAAAABAAIAAAD+/xQAAAABAAIAAAD+/xUAAAABAAIAAAD+/xYAAAABAAIAAAD+/xcAAAABAAIAAAD+/xgAAAABAAIAAAD+/xkAAAABAAIAAAD//xQAAAABAAIAAAD//xUAAAABAAIAAAD//xYAAAABAAIAAAD//xcAAAABAAIAAAD//xgAAAABAAIAAAD//xkAAAABAAIAAAAAABQAAAABAAIAAAAAABUAAAABAAIAAAAAABYAAAABAAIAAAAAABcAAAABAAIAAAAAABgAAAABAAIAAAAAABkAAAABAAIAAAABABQAAAABAAIAAAABABUAAAABAAIAAAABABYAAAABAAIAAAABABcAAAABAAIAAAABABgAAAABAAIAAAABABkAAAABAAIAAAACABQAAAABAAIAAAACABUAAAABAAIAAAACABYAAAABAAIAAAACABcAAAABAAIAAAACABgAAAABAAIAAAACABkAAAABAAIAAAADABQAAAABAAIAAAADABUAAAABAAIAAAADABYAAAABAAIAAAADABcAAAABAAIAAAADABgAAAABAAIAAAADABkAAAABAAIAAAAEABQAAAABAAIAAAAEABUAAAABAAIAAAAEABYAAAABAAIAAAAEABcAAAABAAIAAAAEABgAAAABAAIAAAAEABkAAAABAAIAAAAFABQAAAABAAIAAAAFABUAAAABAAIAAAAFABYAAAABAAIAAAAFABcAAAABAAIAAAAFABgAAAABAAIAAAAFABkAAAABAAIAAAAGABQAAAABAAIAAAAGABUAAAABAAIAAAAGABYAAAABAAIAAAAGABcAAAABAAIAAAAGABgAAAABAAIAAAAGABkAAAABAAIAAAAHABQAAAABAAIAAAAHABUAAAABAAIAAAAHABYAAAABAAIAAAAHABcAAAABAAIAAAAHABgAAAABAAIAAAAHABkAAAABAAIAAAAIABQAAAABAAIAAAAIABUAAAABAAIAAAAIABYAAAABAAIAAAAIABcAAAABAAIAAAAIABgAAAABAAIAAAAIABkAAAABAAIAAAAJABQAAAABAAIAAAAJABUAAAABAAIAAAAJABYAAAABAAIAAAAJABcAAAABAAIAAAAJABgAAAABAAIAAAAJABkAAAABAAIAAAAKABQAAAABAAIAAAAKABUAAAABAAIAAAAKABYAAAABAAIAAAAKABcAAAABAAIAAAAKABgAAAABAAIAAAAKABkAAAABAAIAAAALABQAAAABAAIAAAALABUAAAABAAIAAAALABYAAAABAAIAAAALABcAAAABAAIAAAALABgAAAABAAIAAAALABkAAAABAAIAAAAMABQAAAABAAIAAAAMABUAAAABAAIAAAAMABYAAAABAAIAAAAMABcAAAABAAIAAAAMABgAAAABAAIAAAAMABkAAAABAAIAAAANABIAAAABAAAAAAANABMAAAABAAEAAAANABQAAAABAAIAAAANABUAAAABAAIAAAANABYAAAABAAIAAAANABcAAAABAAIAAAANABgAAAABAAIAAAANABkAAAABAAIAAAAOABIAAAABAAAAAAAOABMAAAABAAEAAAAOABQAAAABAAIAAAAOABUAAAABAAIAAAAOABYAAAABAAIAAAAOABcAAAABAAIAAAAOABgAAAABAAIAAAAOABkAAAABAAIAAAAPABIAAAABAAAAAAAPABMAAAABAAEAAAAPABQAAAABAAIAAAAPABUAAAABAAIAAAAPABYAAAABAAIAAAAPABcAAAABAAIAAAAPABgAAAABAAIAAAAPABkAAAABAAIAAAAQABIAAAACAAAAAAAQABMAAAACAAEAAAAQABQAAAACAAIAAAAQABUAAAACAAIAAAAQABYAAAACAAIAAAAQABcAAAACAAIAAAAQABgAAAACAAIAAAAQABkAAAACAAIAAAARABIAAAADAAAAAAARABMAAAADAAEAAAARABQAAAADAAIAAAAZABQAAAACAAIAAAAZABUAAAACAAIAAAAZABYAAAACAAIAAAAZABcAAAACAAIAAAAZABgAAAACAAIAAAAZABkAAAACAAIAAAAcABQAAAACAAIAAAAcABUAAAACAAIAAAAcABYAAAACAAIAAAAcABcAAAACAAIAAAAcABgAAAACAAIAAAAcABkAAAACAAIAAAAdABQAAAACAAIAAAAdABUAAAACAAIAAAAdABYAAAACAAIAAAAdABcAAAACAAIAAAAdABgAAAACAAIAAAAdABkAAAACAAIAAAAeABQAAAACAAIAAAAeABUAAAACAAIAAAAeABYAAAACAAIAAAAeABcAAAACAAIAAAAeABgAAAACAAIAAAAeABkAAAACAAIAAAAfABQAAAACAAIAAAAfABUAAAACAAIAAAAfABYAAAACAAIAAAAfABcAAAACAAIAAAAfABgAAAACAAIAAAAfABkAAAACAAIAAAAgABQAAAACAAIAAAAgABUAAAACAAIAAAAgABYAAAACAAIAAAAgABcAAAACAAIAAAAgABgAAAACAAIAAAAgABkAAAACAAIAAAAhABQAAAACAAIAAAAhABUAAAACAAIAAAAhABYAAAACAAIAAAAhABcAAAACAAIAAAAhABgAAAACAAIAAAAhABkAAAACAAIAAAAiABQAAAACAAIAAAAiABUAAAACAAIAAAAiABYAAAACAAIAAAAiABcAAAACAAIAAAAiABgAAAACAAIAAAAiABkAAAACAAIAAAAjABQAAAACAAIAAAAjABUAAAACAAIAAAAjABYAAAACAAIAAAAjABcAAAACAAIAAAAjABgAAAACAAIAAAAjABkAAAACAAIAAAAkABQAAAACAAIAAAAkABUAAAACAAIAAAAkABYAAAACAAIAAAAkABcAAAACAAIAAAAkABgAAAACAAIAAAAkABkAAAACAAIAAAAlABQAAAACAAIAAAAlABUAAAACAAIAAAAlABYAAAACAAIAAAAlABcAAAACAAIAAAAlABgAAAACAAIAAAAlABkAAAACAAIAAAAmABQAAAACAAIAAAAmABUAAAACAAIAAAAmABYAAAACAAIAAAAmABcAAAACAAIAAAAmABgAAAACAAIAAAAmABkAAAACAAIAAAAnABQAAAACAAIAAAAnABUAAAACAAIAAAAnABYAAAACAAIAAAAnABcAAAACAAIAAAAnABgAAAACAAIAAAAnABkAAAACAAIAAAAoABQAAAACAAIAAAAoABUAAAACAAIAAAAoABYAAAACAAIAAAAoABcAAAACAAIAAAAoABgAAAACAAIAAAAoABkAAAACAAIAAAApABQAAAACAAIAAAApABUAAAACAAIAAAApABYAAAACAAIAAAApABcAAAACAAIAAAApABgAAAACAAIAAAApABkAAAACAAIAAAAqABQAAAACAAIAAAAqABUAAAACAAIAAAAqABYAAAACAAIAAAAqABcAAAACAAIAAAAqABgAAAACAAIAAAAqABkAAAACAAIAAAArABQAAAACAAIAAAArABUAAAACAAIAAAArABYAAAACAAIAAAArABcAAAACAAIAAAArABgAAAACAAIAAAArABkAAAACAAIAAAAsABIAAAABAAAAAAAsABMAAAABAAEAAAAsABQAAAACAAIAAAAsABUAAAACAAIAAAAsABYAAAACAAIAAAAsABcAAAACAAIAAAAsABgAAAACAAIAAAAsABkAAAACAAIAAAAtABIAAAABAAAAAAAtABMAAAABAAEAAAAtABQAAAACAAIAAAAtABUAAAACAAIAAAAtABYAAAACAAIAAAAtABcAAAACAAIAAAAtABgAAAACAAIAAAAtABkAAAACAAIAAAAuABIAAAABAAAAAAAuABMAAAABAAEAAAAuABQAAAACAAIAAAAuABUAAAACAAIAAAAuABYAAAACAAIAAAAuABcAAAACAAIAAAAuABgAAAACAAIAAAAuABkAAAACAAIAAAAvABIAAAABAAAAAAAvABMAAAABAAEAAAAvABQAAAACAAIAAAAvABUAAAACAAIAAAAvABYAAAACAAIAAAAvABcAAAACAAIAAAAvABgAAAACAAIAAAAvABkAAAACAAIAAAAXABIAAAACAAAAAAAXABMAAAACAAEAAAAXABQAAAACAAIAAAAXABUAAAACAAIAAAAXABYAAAACAAIAAAAXABcAAAACAAIAAAAXABgAAAACAAIAAAAXABkAAAACAAIAAAAWABIAAAAAAAAAAAAWABMAAAAAAAEAAAAWABQAAAAAAAIAAAAWABUAAAAAAAIAAAAWABYAAAAAAAIAAAAWABcAAAAAAAIAAAAWABgAAAAAAAIAAAAWABkAAAAAAAIAAAAYABMAAAACAAEAAAAYABQAAAACAAIAAAAYABUAAAACAAIAAAAYABYAAAACAAIAAAAYABcAAAACAAIAAAAYABgAAAACAAIAAAAYABkAAAACAAIAAAAaABMAAAACAAEAAAAaABQAAAACAAIAAAAaABUAAAACAAIAAAAaABYAAAACAAIAAAAaABcAAAACAAIAAAAaABgAAAACAAIAAAAaABkAAAACAAIAAAAbABMAAAACAAEAAAAbABQAAAACAAIAAAAbABUAAAACAAIAAAAbABYAAAACAAIAAAAbABcAAAACAAIAAAAbABgAAAACAAIAAAAbABkAAAACAAIAAAAYABIAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_043lm")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=808267752]
-stream = ExtResource("3_v6yed")
-autoplay = true
-bus = &"Musica"
-parameters/looping = true
-
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1734476556]
 libraries/ = SubResource("AnimationLibrary_v6yed")
 
@@ -545,16 +537,16 @@ focus_neighbor_bottom = NodePath("../Button2")
 focus_next = NodePath("../Button2")
 focus_previous = NodePath("../Button3")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 0.85, 0.3, 1)
-theme_override_colors/font_pressed_color = Color(0.8, 0.65, 0.2, 1)
 theme_override_colors/font_focus_color = Color(1, 0.85, 0.3, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
+theme_override_colors/font_pressed_color = Color(0.8, 0.65, 0.2, 1)
+theme_override_colors/font_hover_color = Color(1, 0.85, 0.3, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_btn")
-flat = true
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
 text = "Jugar"
+flat = true
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=273363032]
 layout_mode = 2
@@ -563,16 +555,16 @@ focus_neighbor_bottom = NodePath("../Button3")
 focus_next = NodePath("../Button3")
 focus_previous = NodePath("../Button")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 0.85, 0.3, 1)
-theme_override_colors/font_pressed_color = Color(0.8, 0.65, 0.2, 1)
 theme_override_colors/font_focus_color = Color(1, 0.85, 0.3, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
+theme_override_colors/font_pressed_color = Color(0.8, 0.65, 0.2, 1)
+theme_override_colors/font_hover_color = Color(1, 0.85, 0.3, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_btn")
-flat = true
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
 text = "Créditos"
+flat = true
 
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=1327432496]
 layout_mode = 2
@@ -581,76 +573,17 @@ focus_neighbor_bottom = NodePath("../Button")
 focus_next = NodePath("../Button")
 focus_previous = NodePath("../Button2")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 0.85, 0.3, 1)
-theme_override_colors/font_pressed_color = Color(0.8, 0.65, 0.2, 1)
 theme_override_colors/font_focus_color = Color(1, 0.85, 0.3, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
+theme_override_colors/font_pressed_color = Color(0.8, 0.65, 0.2, 1)
+theme_override_colors/font_hover_color = Color(1, 0.85, 0.3, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_btn")
-flat = true
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
 text = "Salir"
-
-[node name="PanelCreditos" type="Panel" parent="." unique_id=89234125]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -80.0
-offset_right = 150.0
-offset_bottom = 80.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelCreditos"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = 10.0
-offset_right = -12.0
-offset_bottom = -10.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 8
-
-[node name="Titulo" type="Label" parent="PanelCreditos/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 18
-text = "CRÉDITOS"
-
-[node name="Contenido" type="Label" parent="PanelCreditos/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 12
-text = "WAYNA (Waska)
-Desarrollo: Terry & Equipo
-Música: SAMIY GameJam OST"
-horizontal_alignment = 1
-
-[node name="BtnCerrarCreditos" type="Button" parent="PanelCreditos/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 0.85, 0.3, 1)
-theme_override_colors/font_pressed_color = Color(0.8, 0.65, 0.2, 1)
-theme_override_colors/font_focus_color = Color(1, 0.85, 0.3, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_btn")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_btn")
 flat = true
-text = "VOLVER"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="PanelCreditos/VBoxContainer/BtnCerrarCreditos" to="." method="_on_btn_cerrar_creditos_pressed"]
-

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjvgl7gb30bd8"
+path="res://.godot/imported/SFX_CAJAS GOLPES.mp3-da04e4c22aa9f9d3c1063b4c20ea32f9.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/SFX_CAJAS GOLPES.mp3"
+dest_files=["res://.godot/imported/SFX_CAJAS GOLPES.mp3-da04e4c22aa9f9d3c1063b4c20ea32f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

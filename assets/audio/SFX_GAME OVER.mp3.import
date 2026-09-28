@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djuvjh3v60uyp"
+path="res://.godot/imported/SFX_GAME OVER.mp3-c3973feb1e5ea7b8bb5aa5d11d0765c0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/SFX_GAME OVER.mp3"
+dest_files=["res://.godot/imported/SFX_GAME OVER.mp3-c3973feb1e5ea7b8bb5aa5d11d0765c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

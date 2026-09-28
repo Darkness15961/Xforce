@@ -1,5 +1,6 @@
-﻿[gd_scene format=3 uid="uid://bwhq6y1h8t2an"]
+[gd_scene format=3 uid="uid://bwhq6y1h8t2an"]
 
+[ext_resource type="Script" uid="uid://cboxsfx18920a" path="res://escenas/objetos/caja.gd" id="1_cajascript"]
 [ext_resource type="Texture2D" uid="uid://748ulaoinydp" path="res://assets/sprites/Cajas_1.png" id="1_qsyg6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_caja"]
@@ -9,6 +10,7 @@ size = Vector2(46, 48)
 mass = 7.0
 gravity_scale = 0.4
 lock_rotation = true
+script = ExtResource("1_cajascript")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821222459]
 shape = SubResource("RectangleShape2D_caja")

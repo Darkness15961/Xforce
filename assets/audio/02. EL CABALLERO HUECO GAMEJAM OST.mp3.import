@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://my2n6731sdtq"
+path="res://.godot/imported/02. EL CABALLERO HUECO GAMEJAM OST.mp3-e608a7b3a49f1f778c98e2545d9cfe5c.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/02. EL CABALLERO HUECO GAMEJAM OST.mp3"
+dest_files=["res://.godot/imported/02. EL CABALLERO HUECO GAMEJAM OST.mp3-e608a7b3a49f1f778c98e2545d9cfe5c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

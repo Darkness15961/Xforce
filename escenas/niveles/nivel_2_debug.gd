@@ -3,6 +3,7 @@ extends Node2D
 @export var reproductorAudio: AudioStreamPlayer
 
 func _ready() -> void:
+	Global.detener_musica_menu()
 	if not reproductorAudio:
 		reproductorAudio = get_node_or_null("AudioStreamPlayer")
 		
@@ -25,3 +26,7 @@ func _exit_tree() -> void:
 	# Respaldo antes de descargar la escena
 	if reproductorAudio and reproductorAudio.playing:
 		Global.posicionAudio = reproductorAudio.get_playback_position()
+
+
+func _on_espinas_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

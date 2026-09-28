@@ -30,7 +30,7 @@ func _on_btn_salir_menu_pressed() -> void:
 	Global.deberRestaurarAudio = false
 	Global.deberRestaurarPosicion = false
 	Global.posicionJugador = Vector2.ZERO
-	get_tree().change_scene_to_file("res://escenas/ui/menu.tscn")
+	Global.cambiar_escena("res://escenas/ui/menu.tscn")
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:

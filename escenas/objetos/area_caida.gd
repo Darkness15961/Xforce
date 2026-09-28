@@ -7,10 +7,18 @@ extends Area2D
 @export var retraso_game_over: float = 0.0
 
 var _activado: bool = false
+var sfx_caida: AudioStreamPlayer = null
 
 func _ready() -> void:
 	if not body_entered.is_connected(_on_body_entered):
 		body_entered.connect(_on_body_entered)
+	
+	sfx_caida = AudioStreamPlayer.new()
+	sfx_caida.name = "SFXCaida"
+	sfx_caida.stream = load("res://assets/audio/sfx_caida.mp3")
+	sfx_caida.bus = &"SFX"
+	sfx_caida.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(sfx_caida)
 
 func _on_body_entered(body: Node2D) -> void:
 	if _activado:
@@ -18,6 +26,10 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	if body.is_in_group("Jugador") or body is CharacterBody2D or body.name.to_lower().contains("jugador"):
 		_activado = true
+		if body.has_method("reproducir_caida"):
+			body.reproducir_caida()
+		elif sfx_caida and not sfx_caida.playing:
+			sfx_caida.play()
 		activar_game_over()
 
 func activar_game_over() -> void:

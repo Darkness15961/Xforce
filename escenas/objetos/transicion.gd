@@ -12,7 +12,9 @@ func _ready() -> void:
 		body_exited.connect(_on_body_exited)
 
 func _process(_delta: float) -> void:
-	if jugadorEnArea and Input.is_action_just_pressed("Interact"):
+	
+	$AnimatedSprite2D.play("si")
+	if jugadorEnArea and Input.is_action_just_pressed("Interact") and not Global.en_transicion:
 		cambiarEscena()
 
 func _on_body_entered(body: Node2D) -> void:
@@ -45,4 +47,4 @@ func cambiarEscena() -> void:
 	call_deferred("_realizarCambioEscena")
 
 func _realizarCambioEscena() -> void:
-	get_tree().change_scene_to_file(siguienteEscena)
+	Global.cambiar_escena(siguienteEscena)

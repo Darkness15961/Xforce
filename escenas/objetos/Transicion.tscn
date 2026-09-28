@@ -1,15 +1,76 @@
-﻿[gd_scene format=3 uid="uid://cx8v6k3oaqy1m"]
+[gd_scene format=3 uid="uid://c58oi5qy3y3tu"]
 
 [ext_resource type="Script" uid="uid://diiynm6ch1q4d" path="res://escenas/objetos/transicion.gd" id="1_trans"]
-[ext_resource type="Texture2D" uid="uid://ditsrw2xgltcx" path="res://assets/ui/llave.png" id="2_llave"]
+[ext_resource type="Texture2D" uid="uid://cut0s82f27q8t" path="res://assets/sprites/monedaCambio.png" id="2_joym6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y705p"]
+atlas = ExtResource("2_joym6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvvpv"]
+atlas = ExtResource("2_joym6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bghi"]
+atlas = ExtResource("2_joym6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5gou"]
+atlas = ExtResource("2_joym6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mqdn"]
+atlas = ExtResource("2_joym6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0486"]
+atlas = ExtResource("2_joym6")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4u55"]
+atlas = ExtResource("2_joym6")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y705p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvvpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bghi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5gou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mqdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0486")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4u55")
+}],
+"loop": 1,
+"name": &"si",
+"speed": 13.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trans"]
 
-[node name="Transicion" type="Area2D"]
+[node name="Transicion" type="Area2D" unique_id=2056414805]
 script = ExtResource("1_trans")
 
-[node name="Llave" type="Sprite2D" parent="."]
-texture = ExtResource("2_llave")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=539132954]
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"si"
+frame_progress = 0.65751195
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1645988213]
+visible = false
 shape = SubResource("RectangleShape2D_trans")

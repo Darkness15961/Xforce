@@ -3,6 +3,7 @@ extends Node2D
 @export var reproductorAudio: AudioStreamPlayer
 
 func _ready() -> void:
+	Global.detener_musica_menu()
 	if not reproductorAudio:
 		reproductorAudio = get_node_or_null("AudioStreamPlayer")
 		
