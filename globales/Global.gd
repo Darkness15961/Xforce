@@ -19,12 +19,12 @@ var enTransicion: bool = false
 signal item_chicha_cambiado(nuevaCantidad: int)
 signal item_celular_cambiado(nuevaCantidad: int)
 
-var itemCelular: int = 0:
+var itemCelular: int:
 	set(valor):
 		itemCelular = maxi(0, valor)
 		item_celular_cambiado.emit(itemCelular)
 
-var itemChicha: int = 0:
+var itemChicha: int:
 	set(valor):
 		itemChicha = maxi(0, valor)
 		item_chicha_cambiado.emit(itemChicha)
