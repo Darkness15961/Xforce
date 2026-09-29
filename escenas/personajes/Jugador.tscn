@@ -1,6 +1,6 @@
 ﻿[gd_scene format=3 uid="uid://pt6hnjwjt34x"]
 
-[ext_resource type="Texture2D" uid="uid://oweoowbsuci7" path="res://assets/sprites/personaje-Sheet.png" id="1_72nju"]
+[ext_resource type="Texture2D" uid="uid://oweoowbsuci7" path="res://assets/sprites/personaje_sinchi.png" id="1_72nju"]
 [ext_resource type="Script" uid="uid://ca0tolgxilsun" path="res://escenas/personajes/jugador.gd" id="1_p0w4i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]

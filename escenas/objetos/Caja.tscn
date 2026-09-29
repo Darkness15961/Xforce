@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwhq6y1h8t2an"]
 
-[ext_resource type="Script" uid="uid://cboxsfx2aa20a" path="res://escenas/objetos/caja.gd" id="1_cajascript"]
-[ext_resource type="Texture2D" uid="uid://748ulaoinydp" path="res://assets/sprites/Cajas_1.png" id="1_qsyg6"]
+[ext_resource type="Script" uid="uid://cboxsfx18920a" path="res://escenas/objetos/caja.gd" id="1_cajascript"]
+[ext_resource type="Texture2D" uid="uid://748ulaoinydp" path="res://assets/sprites/caja_1.png" id="1_qsyg6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_caja"]
 friction = 0.0

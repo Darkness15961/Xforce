@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cy4lowh5ndmpn"]
 
-[ext_resource type="Texture2D" uid="uid://birjexefn6j3m" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono1.png" id="1_bb0h7"]
+[ext_resource type="Texture2D" uid="uid://birjexefn6j3m" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/icono_celular.png" id="1_bb0h7"]
 [ext_resource type="Script" uid="uid://jeoydnocndqw" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Scripts/celular.gd" id="1_gm0t1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c80uq"]

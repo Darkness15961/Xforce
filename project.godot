@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Waska"
-run/main_scene="uid://duej3sv2stsns"
+config/name="Chakana"
+config/version="0.4"
+run/main_scene="res://escenas/ui/menu.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/stretch_mode=4
+boot_splash/use_filter=false
+boot_splash/image="uid://bic7fanpu7yhx"
+config/icon="uid://n7hlhdwbwjh6"
 
 [audio]
 
@@ -21,12 +25,12 @@ busses/default_bus_layout="res://default_bus_layout.tres"
 
 [autoload]
 
-Global="*uid://cutx1cdffcbjg"
-DialogueManager="*uid://c3rodes2l3gxb"
+Global="*res://globales/Global.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 
-runtime/balloon_path="uid://cbdidxingvjc2"
+runtime/balloon_path="res://dialogos/balloon.tscn"
 
 [display]
 

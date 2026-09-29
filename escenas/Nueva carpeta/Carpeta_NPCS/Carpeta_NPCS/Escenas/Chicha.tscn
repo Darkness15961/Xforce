@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://kxan3a6vmvdq"]
 
 [ext_resource type="Script" uid="uid://d30n4sdxd78l6" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Scripts/chicha.gd" id="1_3itaj"]
-[ext_resource type="Texture2D" uid="uid://b1rkyy858nuyn" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/Icono2.png" id="1_bp7on"]
+[ext_resource type="Texture2D" uid="uid://b1rkyy858nuyn" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/icono_chicha.png" id="1_bp7on"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bp7on"]
 radius = 15.0

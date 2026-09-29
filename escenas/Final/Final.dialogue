@@ -1,39 +1,39 @@
 ~ ending
 do aparecer_protagonistas()
 do aparecer_inti()
-Carlos: ¡Lo logramos!
-Sinchi: ¡Tukuyta huñuranchik! / ¡Lo reunimos todo!
-Inti: Sí.
-Inti: Han encontrado todos los fragmentos de la Chakana.
-Carlos: Pensé que nunca lo conseguiríamos.
-Sinchi: Ñuqapas. / Yo también.
-Carlos: ...
-Sinchi: ...
-Carlos: ¿Entendiste?
-Sinchi: ...
-Inti: Parece que ahora comienzan a entenderse.
-Carlos: Un poco.
-Sinchi: Pisi. / Un poco.
-Inti: Al principio caminaban separados.
-Inti: No podían comprenderse.
-Inti: Pero aprendieron a escucharse.
-Inti: A ayudarse.
-Inti: Y a confiar el uno en el otro.
-Carlos: Lo hicimos juntos.
-Sinchi: Yanapanakuspa. / Ayudándonos.
-Inti: Por eso la Chakana ha vuelto a estar completa.
-Inti: Y ahora puede abrir el camino de regreso.
-Carlos: ¿Volveremos a nuestras vidas?
-Inti: Sí.
-Inti: Cada uno regresará al tiempo al que pertenece.
-Sinchi: ¿Manachuqa kutimusaq? / ¿No volveremos a vernos?
-Inti: Los caminos pueden separarse...
-Inti: pero aquello que aprendieron juntos permanecerá.
-Carlos: Entonces...
-Carlos: Gracias.
-Sinchi: Sulpayki. / Gracias.
-Inti: Es hora.
-Inti: Que cada uno siga su camino.
+Carlos: ¡Lo logramos! [#voice=res://assets/audio/voces/final/carlos/carlos_lo_logramos.mp3]
+Sinchi: ¡Tukuyta huñuranchik! / ¡Lo reunimos todo! [#voice=res://assets/audio/voces/final/sinchi/sinchi_tukuyta_hunuranchik.mp3]
+Inti: Si. [#voice=res://assets/audio/voces/final/inti/inti_si_1.mp3]
+Inti: Han encontrado todos los fragmentos de la Chakana. [#voice=res://assets/audio/voces/final/inti/inti_han_encontrado_todos_los_fragmentos_de_la_chakana.mp3]
+Carlos: Pense que nunca lo conseguiriamos. [#voice=res://assets/audio/voces/final/carlos/carlos_pense_que_nunca_lo_conseguiriamos.mp3]
+Sinchi: Ñuqapas. / Yo tambien. [#voice=res://assets/audio/voces/final/sinchi/sinchi_nuqapas.mp3]
+Carlos: ... [next=1.0]
+Sinchi: ... [next=1.0]
+Carlos: ¿Entendiste? [#voice=res://assets/audio/voces/final/carlos/carlos_entendiste.mp3]
+Sinchi: ... [next=1.0]
+Inti: Parece que ahora comienzan a entenderse. [#voice=res://assets/audio/voces/final/inti/inti_parece_que_ahora_comienzan_a_entenderse.mp3]
+Carlos: Un poco. [#voice=res://assets/audio/voces/final/carlos/carlos_un_poco.mp3]
+Sinchi: Pisi. / Un poco. [#voice=res://assets/audio/voces/final/sinchi/sinchi_pisi.mp3]
+Inti: Al principio caminaban separados. [#voice=res://assets/audio/voces/final/inti/inti_al_principio_caminaban_separados.mp3]
+Inti: No podian comprenderse. [#voice=res://assets/audio/voces/final/inti/inti_no_podian_comprenderse.mp3]
+Inti: Pero aprendieron a escucharse. [#voice=res://assets/audio/voces/final/inti/inti_pero_aprendieron_a_escucharse.mp3]
+Inti: A ayudarse. [#voice=res://assets/audio/voces/final/inti/inti_a_ayudarse.mp3]
+Inti: Y a confiar el uno en el otro. [#voice=res://assets/audio/voces/final/inti/inti_y_a_confiar_el_uno_en_el_otro.mp3]
+Carlos: Lo hicimos juntos. [#voice=res://assets/audio/voces/final/carlos/carlos_lo_hicimos_juntos.mp3]
+Sinchi: Yanapanakuspa. / Ayudandonos. [#voice=res://assets/audio/voces/final/sinchi/sinchi_yanapanakuspa.mp3]
+Inti: Por eso la Chakana ha vuelto a estar completa. [#voice=res://assets/audio/voces/final/inti/inti_por_eso_la_chakana_ha_vuelto_a_estar_completa.mp3]
+Inti: Y ahora puede abrir el camino de regreso. [#voice=res://assets/audio/voces/final/inti/inti_y_ahora_puede_abrir_el_camino_de_regreso.mp3]
+Carlos: ¿Volveremos a nuestras vidas? [#voice=res://assets/audio/voces/final/carlos/carlos_volveremos_a_nuestras_vidas.mp3]
+Inti: Si. [#voice=res://assets/audio/voces/final/inti/inti_si_2.mp3]
+Inti: Cada uno regresara al tiempo al que pertenece. [#voice=res://assets/audio/voces/final/inti/inti_cada_uno_regresara_al_tiempo_al_que_pertenece.mp3]
+Sinchi: ¿Manachuqa kutimusaq? / ¿No volveremos a vernos? [#voice=res://assets/audio/voces/final/sinchi/sinchi_manachuqa_kutimusaq.mp3]
+Inti: Los caminos pueden separarse... [#voice=res://assets/audio/voces/final/inti/inti_los_caminos_pueden_separarse.mp3]
+Inti: pero aquello que aprendieron juntos permanecera. [#voice=res://assets/audio/voces/final/inti/inti_pero_aquello_que_aprendieron_juntos_permanecera.mp3]
+Carlos: Entonces... [#voice=res://assets/audio/voces/final/carlos/carlos_entonces.mp3]
+Carlos: Gracias. [#voice=res://assets/audio/voces/final/carlos/carlos_gracias.mp3]
+Sinchi: Sulpayki. / Gracias. [#voice=res://assets/audio/voces/final/sinchi/sinchi_sulpayki.mp3]
+Inti: Es hora. [#voice=res://assets/audio/voces/final/inti/inti_es_hora.mp3]
+Inti: Que cada uno siga su camino. [#voice=res://assets/audio/voces/final/inti/inti_que_cada_uno_siga_su_camino.mp3]
 => chakana_activate
 
 
@@ -43,10 +43,10 @@ do activar_chakana()
 
 
 ~ return
-Carlos: ¡Espera!
-Carlos: ¿Volveremos a encontrarnos?
-Sinchi: Tupananchiskama. / Hasta que volvamos a encontrarnos.
-Inti: Quizá los caminos vuelvan a cruzarse.
-Inti: Pero eso...
-Inti: solo el tiempo lo sabe.
+Carlos: ¡Espera! [#voice=res://assets/audio/voces/final/carlos/carlos_espera.mp3]
+Carlos: ¿Volveremos a encontrarnos? [#voice=res://assets/audio/voces/final/carlos/carlos_volveremos_a_encontrarnos.mp3]
+Sinchi: Tupananchiskama. / Hasta que volvamos a encontrarnos. [#voice=res://assets/audio/voces/final/sinchi/sinchi_tupananchiskama.mp3]
+Inti: Quiza los caminos vuelvan a cruzarse. [#voice=res://assets/audio/voces/final/inti/inti_quiza_los_caminos_vuelvan_a_cruzarse.mp3]
+Inti: Pero eso... [#voice=res://assets/audio/voces/final/inti/inti_pero_eso.mp3]
+Inti: solo el tiempo lo sabe. [#voice=res://assets/audio/voces/final/inti/inti_solo_el_tiempo_lo_sabe.mp3]
 => END

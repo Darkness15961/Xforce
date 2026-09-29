@@ -1,10 +1,10 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://escenas/Final/scripts/final.gd" id="1_final"]
-[ext_resource type="Texture2D" uid="uid://oweoowbsuci7" path="res://assets/sprites/personaje-Sheet.png" id="1_y2bjm"]
-[ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje-Presente__.png" id="2_presente"]
+[ext_resource type="Texture2D" uid="uid://oweoowbsuci7" path="res://assets/sprites/personaje_sinchi.png" id="1_y2bjm"]
+[ext_resource type="Texture2D" uid="uid://b2wdwdhghb3qw" path="res://assets/sprites/personaje_carlos.png" id="2_presente"]
 [ext_resource type="Resource" path="res://escenas/Final/Final.dialogue" id="2_dialogue"]
-[ext_resource type="Texture2D" uid="uid://4owi43slmw5r" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/inti.png" id="3_inti"]
+[ext_resource type="Texture2D" uid="uid://4owi43slmw5r" path="res://escenas/Nueva carpeta/Carpeta_NPCS/Carpeta_NPCS/Sprites/personaje_inti.png" id="3_inti"]
 [ext_resource type="PackedScene" uid="uid://b0v4o453tgg40" path="res://escenas/ui/Opcionesdepausa.tscn" id="5_oauko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u2ogb"]
@@ -145,8 +145,8 @@ script = ExtResource("1_final")
 carlos = NodePath("Carlos")
 sinchi = NodePath("Sinchi")
 inti = NodePath("Inti")
-dialogue_resource = ExtResource("2_dialogue")
-dialogue_start_title = "ending"
+recursoDialogo = ExtResource("2_dialogue")
+tituloInicioDialogo = "ending"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

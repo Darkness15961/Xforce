@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://diiynm6ch1q4d" path="res://escenas/objetos/transicion.gd" id="1_trans"]
 [ext_resource type="Shader" path="res://escenas/objetos/borde_interaccion.gdshader" id="2_shader"]
-[ext_resource type="Texture2D" uid="uid://cut0s82f27q8t" path="res://assets/sprites/monedaCambio.png" id="2_joym6"]
+[ext_resource type="Texture2D" uid="uid://cut0s82f27q8t" path="res://assets/sprites/moneda_cambio.png" id="2_joym6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_outline"]
 resource_local_to_scene = true

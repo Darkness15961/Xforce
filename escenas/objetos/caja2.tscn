@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bqxf5dnimcifk"]
 
 [ext_resource type="Script" uid="uid://cboxsfx18920a" path="res://escenas/objetos/caja.gd" id="1_cajascript"]
-[ext_resource type="Texture2D" uid="uid://kyojgrd6ppf4" path="res://assets/sprites/Cajas_2.png" id="1_xk2l8"]
+[ext_resource type="Texture2D" uid="uid://kyojgrd6ppf4" path="res://assets/sprites/caja_2.png" id="1_xk2l8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_caja2"]
 friction = 0.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rabi"]
-size = Vector2(28, 28)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_caja2"]
+points = PackedVector2Array(-14, -14, 14, -14, 14, 10, 10, 14, -10, 14, -14, 10)
 
 [node name="Caja2" type="RigidBody2D" unique_id=1522867153]
 mass = 3.0
@@ -18,7 +18,7 @@ lock_rotation = true
 script = ExtResource("1_cajascript")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=52624852]
-shape = SubResource("RectangleShape2D_3rabi")
+shape = SubResource("ConvexPolygonShape2D_caja2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1223963381]
 scale = Vector2(0.9, 0.9)

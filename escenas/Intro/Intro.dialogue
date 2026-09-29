@@ -1,67 +1,80 @@
 ~ start
-Carlos: ¿Dónde estoy?
+Carlos: ¿Donde estoy? [#voice=res://assets/audio/voces/intro/carlos/carlos_donde_esotoy.mp3]
 do sacar_celular()
-Carlos: Mi celular no funciona.
+Carlos: Mi celular no funciona. [#voice=res://assets/audio/voces/intro/carlos/carlos_mi_celular_no_funciona.mp3]
 do guardar_celular()
 do aparecer_sinchi()
-Sinchi: ¿Maypitaq kay?
+Sinchi: ¿Maypitaq kay? [#voice=res://assets/audio/voces/intro/sinchi/sinchi_maypitaq_kay.mp3]
 do carlos_mira_a_sinchi()
-Carlos: ...
+Carlos: ¿Que dijiste? [#voice=res://assets/audio/voces/intro/carlos/carlos_que_dijiste.mp3]
+Carlos: No te entiendo. [#voice=res://assets/audio/voces/intro/carlos/carlos_no_te_entiendo.mp3]
 do mirarse_fijamente()
-Sinchi: ¿Pitaq kanki?
-Carlos: ?
-Sinchi: ...
+Sinchi: ¿Pitaq kanki? [#voice=res://assets/audio/voces/intro/sinchi/sinchi_pitaq_kanki.mp3]
+Carlos: Espera... ¿tu tampoco sabes donde estamos? [#voice=res://assets/audio/voces/intro/carlos/carlos_espera_tutampoco_sabes_donde_estamos.mp3]
 => inti_appear
 
 
 ~ inti_appear
 do aparecer_inti()
-Inti: Tranquilos.
-Carlos: ¿Quién eres?
-Sinchi: ¿Pitaq kanki?
-Inti: Soy Inti.
-Inti: No han llegado aquí por accidente.
+Inti: Tranquilos. [#voice=res://assets/audio/voces/intro/inti/inti_tranquilos.mp3]
+Carlos: ¿Quien eres? [#voice=res://assets/audio/voces/intro/carlos/carlos_quien_eres.mp3]
+Carlos: ¿Tu nos trajiste? [#voice=res://assets/audio/voces/intro/carlos/carlos_tu_nos_trajiste.mp3]
+Inti: No han llegado aqui por accidente. [#voice=res://assets/audio/voces/intro/inti/inti_no_han_llegado_aqui_por_accidente.mp3]
 do calmarse()
-Carlos: ¿Por qué estamos aquí?
-Inti: Han sido traídos a un tiempo que no es el suyo.
-Sinchi: ¿Imarayku kaypi kachkaniku?
-Inti: Porque algo importante se ha perdido.
-Inti: La Chakana fue destruida.
-Inti: Sus fragmentos quedaron separados entre distintos tiempos.
-Carlos: ¿Y qué tenemos que hacer?
-Inti: Encontrar sus fragmentos y volver a unirlos.
-Sinchi: ¿Imataq ruwasun?
-Inti: Tendrán que trabajar juntos.
-Carlos: ¿Juntos?
-Sinchi: ...
-Inti: Aunque ahora no puedan entenderse...
-Inti: cada uno posee algo que el otro necesita.
-Inti: Solo trabajando en equipo podrán recuperar todos los fragmentos.
-Sinchi: ¿Chaymanta kutisunchik? / ¿Después podremos regresar?
-Inti: Sí.
-Inti: Cuando la Chakana vuelva a estar completa...
-Inti: cada uno podrá regresar a su propio tiempo.
-=> exchange
+Carlos: Entonces, ¿como llegamos aqui? [#voice=res://assets/audio/voces/intro/carlos/carlos_entonces_como_llegamos_aqui.mp3]
+Sinchi: ¿Imarayku kaypi kachkaniku? / ¿Por que estamos aqui? [#voice=res://assets/audio/voces/intro/sinchi/sinchi_imarayku_kaypi_kachkaniku.mp3]
+Inti: Lo se. [#voice=res://assets/audio/voces/intro/inti/inti_lo_se.mp3]
+Inti: Pero el tiempo tiene sus propios caminos. [#voice=res://assets/audio/voces/intro/inti/inti_pero_el_tiempo_tiene_sus_propios_caminos.mp3]
+Inti: A veces cambia lo que vemos... [#voice=res://assets/audio/voces/intro/inti/inti_a_veces_cambia_lo_que_vemos.mp3]
+Inti: a veces se lleva aquello que creiamos eterno. [#voice=res://assets/audio/voces/intro/inti/inti_a_veces_se_lleva_aquello_que_creiamos_eterno.mp3]
+Inti: Y, sin embargo... [#voice=res://assets/audio/voces/intro/inti/inti_y_sin_embargo.mp3]
+Inti: hay cosas que permanecen aunque nadie las vea. [#voice=res://assets/audio/voces/intro/inti/inti_hay_cosas_que_permanecen_aunque_nadie_las_vea.mp3]
+Inti: La tierra puede cambiar de rostro... [#voice=res://assets/audio/voces/intro/inti/inti_la_tierra_puede_cambiar_de_rostro.mp3]
+Inti: pero no siempre olvida los pasos de quienes caminaron sobre ella. [#voice=res://assets/audio/voces/intro/inti/inti_pero_no_siempre_olvida_los_pasos_de_quienes_caminaron_sobre_ella.mp3]
+Inti: Ambos creen conocer el lugar que llaman hogar. [#voice=res://assets/audio/voces/intro/inti/inti_ambos_creen_conocer_el_lugar_que_llaman_hogar.mp3]
+Inti: Han caminado sobre la misma tierra... [#voice=res://assets/audio/voces/intro/inti/inti_han_caminado_sobre_la_misma_tierra.mp3]
+Inti: pero cada uno conoce solo una parte de ella. [#voice=res://assets/audio/voces/intro/inti/inti_pero_cada_uno_conoce_solo_una_parte_de_ella.mp3]
+Inti: Uno mira hacia adelante... [#voice=res://assets/audio/voces/intro/inti/inti_uno_mira_hacia_adelante.mp3]
+Inti: el otro, hacia atras. [#voice=res://assets/audio/voces/intro/inti/inti_el_otro_hacia_atras.mp3]
+Inti: Se encuentran caminando. [#voice=res://assets/audio/voces/intro/inti/inti_se_encuentran_caminando.mp3]
+=> mission
 
 
-~ exchange
-Carlos: ¿Y tú nos ayudarás?
-Inti: Los guiaré cuando sea necesario.
-Inti: Pero el camino tendrán que recorrerlo ustedes.
-Sinchi: ¿Qhipaman kutisunchik? / ¿Regresaremos a nuestros tiempos?
-Inti: Sí.
-Inti: Si encuentran todos los fragmentos.
-Carlos: Entonces tenemos que hacerlo juntos.
-Inti: Así es.
-=> transition
+~ mission
+Carlos: ¿Que tenemos que hacer? [#voice=res://assets/audio/voces/intro/carlos/carlos_que_tenemos_que_hacer.mp3]
+Sinchi: ¿Imataq ruwasun? / ¿Que haremos? [#voice=res://assets/audio/voces/intro/sinchi/sinchi_imataq_ruwasun.mp3]
+Inti: Dos tiempos. [#voice=res://assets/audio/voces/intro/inti/inti_dos_tiempos.mp3]
+Inti: Dos caminos. [#voice=res://assets/audio/voces/intro/inti/inti_dos_caminos.mp3]
+Inti: Dos fragmentos. [#voice=res://assets/audio/voces/intro/inti/inti_dos_fragmentos.mp3]
+Inti: Deberan encontrar aquello que los une. [#voice=res://assets/audio/voces/intro/inti/inti_deberan_encontrar_aquello_que_los_une.mp3]
+Inti: Ahora caminaran por los pasos del otro. [#voice=res://assets/audio/voces/intro/inti/inti_ahora_caminaran_por_los_pasos_del_otro.mp3]
+Carlos: ¿Los pasos del otro? [#voice=res://assets/audio/voces/intro/carlos/carlos_los_pasos_del_otro.mp3]
+Inti: Cada uno vivira en un tiempo que no le pertenece. [#voice=res://assets/audio/voces/intro/inti/inti_cada_uno_vivira_en_un_tiempo_que_no_le_pertenece.mp3]
+Inti: Conoceran sus caminos. [#voice=res://assets/audio/voces/intro/inti/inti_conoceran_sus_caminos.mp3]
+Inti: Enfrentaran sus peligros. [#voice=res://assets/audio/voces/intro/inti/inti_enfrentaran_sus_peligros.mp3]
+Inti: Y aprenderan aquello que su propio tiempo nunca pudo ensenarles. [#voice=res://assets/audio/voces/intro/inti/inti_y_aprenderan_aquello_que_su_propio_tiempo_nunca_pudo_ensenarles.mp3]
+Carlos: Espera... ¿que nos va a pasar? [#voice=res://assets/audio/voces/intro/carlos/carlos_espera_que_nos_va_a_pasar.mp3]
+Inti: Eso tendran que descubrirlo ustedes. [#voice=res://assets/audio/voces/intro/inti/inti_eso_tendran_que_descubrirlo_ustedes.mp3]
+Inti: Pero algunas respuestas no se encuentran mirando. [#voice=res://assets/audio/voces/intro/inti/inti_pero_algunas_respuestas_no_se_encuentran_mirando.mp3]
+Sinchi: ¿Chaymanta kutisunchik? / ¿Despues podremos regresar? [#voice=res://assets/audio/voces/intro/sinchi/sinchi_chaymanta_kutisunchik.mp3]
+Carlos: ¿Y despues? [#voice=res://assets/audio/voces/intro/carlos/carlos_y_despues.mp3]
+Inti: Si. [#voice=res://assets/audio/voces/intro/inti/inti_si.mp3]
+Inti: Si quieren volver a casa... [#voice=res://assets/audio/voces/intro/inti/inti_si_quieren_volver_a_casa.mp3]
+Inti: cuando la Chakana vuelva a estar completa... [#voice=res://assets/audio/voces/intro/inti/inti_cuando_la_chakana_vuelva_a_estar_completa.mp3]
+Inti: podran regresar. [#voice=res://assets/audio/voces/intro/inti/inti_podran_regresar.mp3]
+Inti: No seran los mismos que partieron. [#voice=res://assets/audio/voces/intro/inti/inti_no_seran_los_mismos_que_partieron.mp3]
+=> farewell
 
 
-~ transition
-Inti: Recuerden...
-Inti: Dos tiempos.
-Inti: Dos caminos.
-Inti: Una misma misión.
-Sinchi: Tupananchiskama. / Hasta que volvamos a encontrarnos.
-Carlos: Hasta entonces.
-Inti: Que comience el camino.
+~ farewell
+Carlos: ¿Nos volveremos a ver? [#voice=res://assets/audio/voces/intro/carlos/carlos_nos_volveremos_a_ver.mp3]
+Inti: El camino les dara la respuesta. [#voice=res://assets/audio/voces/intro/inti/inti_el_camino_les_dara_la_respuesta.mp3]
+Carlos: ¿Y tu que haras? [#voice=res://assets/audio/voces/intro/carlos/carlos_y_tu_que_haras.mp3]
+Inti: Observare. [#voice=res://assets/audio/voces/intro/inti/inti_observare.mp3]
+Inti: Y cuando llegue el momento... [#voice=res://assets/audio/voces/intro/inti/inti_y_cuando_llegue_el_momento.mp3]
+Inti: cuando el camino termine... [#voice=res://assets/audio/voces/intro/inti/inti_cuando_el_camino_termine.mp3]
+Inti: volveran a encontrarme. [#voice=res://assets/audio/voces/intro/inti/inti_volveran_a_encontrarme.mp3]
+Inti: Recuerden. [#voice=res://assets/audio/voces/intro/inti/inti_recuerden.mp3]
+Carlos: Hasta entonces. [#voice=res://assets/audio/voces/intro/carlos/carlos_hasta_entonces.mp3]
+Inti: Que comience el camino. [#voice=res://assets/audio/voces/intro/inti/inti_que_comience_el_camino.mp3]
 => END

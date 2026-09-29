@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://cjbdi6lqhlahq"]
 
 [ext_resource type="Script" path="res://escenas/niveles/nivel_4_debug.gd" id="1_n4script"]
-[ext_resource type="Texture2D" uid="uid://cr68i2kbhygpr" path="res://assets/sprites/Tiles_Lazos.png" id="1_aajs7"]
-[ext_resource type="Texture2D" uid="uid://7y4i6cabvcok" path="res://assets/sprites/Fondo_Cielo.png" id="2_l4b7a"]
-[ext_resource type="Texture2D" uid="uid://co5slfd0juhd0" path="res://assets/sprites/clouds_back.png" id="3_jsr40"]
-[ext_resource type="Texture2D" uid="uid://cffrm5vdeeipv" path="res://assets/sprites/Fondo_Montaña.png" id="4_xs1oj"]
-[ext_resource type="Texture2D" uid="uid://cpua5vm74cbyl" path="res://assets/sprites/clouds_front.png" id="5_g7q5c"]
-[ext_resource type="Texture2D" uid="uid://cj4wmqbkbwm8t" path="res://assets/sprites/Fondo_Casas.png" id="6_2oflt"]
-[ext_resource type="Texture2D" uid="uid://b2o5xcr1mcivx" path="res://assets/sprites/Fondo_Cerca.png" id="7_6eina"]
+[ext_resource type="Texture2D" uid="uid://cr68i2kbhygpr" path="res://assets/sprites/tiles_pasado.png" id="1_aajs7"]
+[ext_resource type="Texture2D" uid="uid://bjl8b5nu2kcwx" path="res://assets/sprites/fondo_cielo.png" id="2_l4b7a"]
+[ext_resource type="Texture2D" uid="uid://co5slfd0juhd0" path="res://assets/sprites/nubes_fondo.png" id="3_jsr40"]
+[ext_resource type="Texture2D" uid="uid://cffrm5vdeeipv" path="res://assets/sprites/fondo_montana.png" id="4_xs1oj"]
+[ext_resource type="Texture2D" uid="uid://cpua5vm74cbyl" path="res://assets/sprites/nubes_frente.png" id="5_g7q5c"]
+[ext_resource type="Texture2D" uid="uid://jhsqu47j6l7w" path="res://assets/sprites/fondo_casas.png" id="6_2oflt"]
+[ext_resource type="Texture2D" uid="uid://d0sfhr6b2ondr" path="res://assets/sprites/fondo_cerca.png" id="7_6eina"]
 [ext_resource type="PackedScene" uid="uid://bwhq6y1h8t2an" path="res://escenas/objetos/Caja.tscn" id="8_qmpkl"]
 [ext_resource type="PackedScene" uid="uid://c58oi5qy3y3tu" path="res://escenas/objetos/Transicion.tscn" id="9_rwd85"]
 [ext_resource type="PackedScene" uid="uid://bnhga2qq3pasr" path="res://escenas/personajes/Jugador2.tscn" id="10_do6n3"]
@@ -15,8 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://b0v4o453tgg40" path="res://escenas/ui/Opcionesdepausa.tscn" id="12_ptvkp"]
 [ext_resource type="PackedScene" path="res://escenas/objetos/AreaCaida.tscn" id="13_jh012"]
 [ext_resource type="PackedScene" path="res://escenas/ui/GameOver.tscn" id="14_f4lbg"]
-[ext_resource type="Texture2D" uid="uid://b652oyqdd0dvj" path="res://assets/sprites/Fondo_arboles_Primer_Plano1 (1).png" id="15_36fim"]
-[ext_resource type="Texture2D" uid="uid://e66np0v8dfg8" path="res://assets/sprites/Chakana_Partes2.png" id="16_aajs7"]
+[ext_resource type="Texture2D" uid="uid://b652oyqdd0dvj" path="res://assets/sprites/fondo_arboles_primer_plano.png" id="15_36fim"]
+[ext_resource type="Texture2D" uid="uid://e66np0v8dfg8" path="res://assets/sprites/chacana_partes_2.png" id="16_aajs7"]
 [ext_resource type="PackedScene" uid="uid://b7y2u1lhud2" path="res://escenas/ui/hud_nivel2.tscn" id="17_hud2"]
 [ext_resource type="PackedScene" uid="uid://dp6bvhw3x8y7q" path="res://escenas/objetos/Chacana.tscn" id="18_chacana"]
 
@@ -227,7 +227,7 @@ centered = false
 [node name="ChakanaParte2" parent="." unique_id=983383753 instance=ExtResource("18_chacana")]
 position = Vector2(672, 200)
 rotation = -1.5707964
-siguiente_escena = "res://escenas/Final/Final.tscn"
+siguienteEscena = "res://escenas/Final/Final.tscn"
 textura = ExtResource("16_aajs7")
 
 [node name="HUD_Nivel2" parent="." instance=ExtResource("17_hud2")]
